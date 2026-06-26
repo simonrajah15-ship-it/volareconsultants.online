@@ -7,58 +7,28 @@
 <title>Volare Consultants — Digital Products for Builders & Earners</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --navy:       #0a0f1e;
-    --navy-card:  #111827;
-    --navy-mid:   #1e293b;
-    --gold:       #f59e0b;
-    --gold-light: #fcd34d;
-    --teal:       #0d9488;
-    --slate:      #94a3b8;
-    --light:      #e2e8f0;
-    --white:      #ffffff;
-    --green:      #10b981;
-    --purple:     #7c3aed;
-    --purple-mid: #8b5cf6;
-    --coral:      #f97316;
+    --navy: #0a0f1e; --navy-card: #111827; --navy-mid: #1e293b;
+    --gold: #f59e0b; --gold-light: #fcd34d;
+    --teal: #0d9488; --slate: #94a3b8; --light: #e2e8f0; --white: #ffffff;
+    --green: #10b981; --purple: #7c3aed; --purple-mid: #8b5cf6; --coral: #f97316;
   }
-
-  body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background: var(--navy);
-    color: var(--slate);
-    line-height: 1.7;
-    font-size: 16px;
-  }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--navy); color: var(--slate); line-height: 1.7; font-size: 16px; }
   a { text-decoration: none; }
 
-  /* ── SISTER SITE BANNER ── */
-  .sister-banner {
-    background: linear-gradient(90deg, #0d1a2e 0%, #1a1040 100%);
-    border-bottom: 1px solid rgba(13,148,136,0.4);
-    padding: 0.55rem 1.5rem;
-    display: flex; align-items: center; justify-content: center;
-    gap: 1rem; flex-wrap: wrap; text-align: center;
+  /* SISTER NOTICE */
+  .sister-notice {
+    background: #0d1a2e;
+    border-bottom: 2px solid var(--teal);
+    padding: 0.6rem 1.5rem;
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--light);
   }
-  .sister-banner span { font-size: 0.82rem; color: var(--light); }
-  .sister-banner strong { color: var(--gold); }
-  .sister-banner a.sister-btn {
-    background: var(--teal); color: var(--white);
-    padding: 0.25rem 0.9rem; border-radius: 20px;
-    font-size: 0.78rem; font-weight: 700;
-    transition: background 0.2s; white-space: nowrap;
-  }
-  .sister-banner a.sister-btn:hover { background: #0f766e; }
+  .sister-notice a { color: var(--gold); font-weight: 700; text-decoration: underline; }
 
-  /* ── NAV ── */
-  nav {
-    background: var(--navy-card);
-    border-bottom: 2px solid var(--gold);
-    padding: 0.9rem 1.5rem;
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem;
-    position: sticky; top: 0; z-index: 100;
-  }
+  /* NAV */
+  nav { background: var(--navy-card); border-bottom: 2px solid var(--gold); padding: 0.9rem 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem; position: sticky; top: 0; z-index: 100; }
   .nav-brand { font-size: 1.05rem; font-weight: 800; color: var(--white); }
   .nav-brand span { color: var(--gold); }
   .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
@@ -67,18 +37,9 @@
   .nav-links a.nav-cta { background: var(--gold); color: var(--navy); padding: 0.3rem 0.85rem; border-radius: 20px; font-weight: 700; font-size: 0.8rem; }
   .nav-links a.nav-cta:hover { background: var(--gold-light); }
 
-  /* ── HERO ── */
-  .hero {
-    background: linear-gradient(160deg, #0d1525 0%, #0a0f1e 60%, #0d1a2e 100%);
-    text-align: center; padding: 5rem 1.5rem 4rem;
-    border-bottom: 1px solid rgba(245,158,11,0.15);
-  }
-  .hero-pill {
-    display: inline-flex; align-items: center; gap: 0.4rem;
-    background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.35);
-    color: var(--gold); padding: 0.3rem 1rem; border-radius: 30px;
-    font-size: 0.78rem; font-weight: 600; margin-bottom: 1.8rem; letter-spacing: 0.04em;
-  }
+  /* HERO */
+  .hero { background: linear-gradient(160deg, #0d1525 0%, #0a0f1e 60%, #0d1a2e 100%); text-align: center; padding: 5rem 1.5rem 4rem; border-bottom: 1px solid rgba(245,158,11,0.15); }
+  .hero-pill { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.35); color: var(--gold); padding: 0.3rem 1rem; border-radius: 30px; font-size: 0.78rem; font-weight: 600; margin-bottom: 1.8rem; }
   .hero h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); font-weight: 800; color: var(--white); line-height: 1.25; max-width: 680px; margin: 0 auto 1rem; }
   .hero h1 em { color: var(--gold); font-style: italic; }
   .hero p { font-size: 1rem; color: var(--slate); max-width: 540px; margin: 0 auto 2.2rem; }
@@ -88,14 +49,14 @@
   .btn-outline { border: 2px solid var(--gold); color: var(--gold); padding: 0.73rem 1.8rem; border-radius: 30px; font-weight: 700; font-size: 0.9rem; transition: all 0.2s; display: inline-block; }
   .btn-outline:hover { background: rgba(245,158,11,0.08); }
 
-  /* ── STATS ── */
-  .stats-row { background: var(--navy-card); border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: center; flex-wrap: wrap; gap: 0; }
+  /* STATS */
+  .stats-row { background: var(--navy-card); border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: center; flex-wrap: wrap; }
   .stat-item { text-align: center; padding: 1.6rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.06); }
   .stat-item:last-child { border-right: none; }
   .stat-num { font-size: 2rem; font-weight: 800; color: var(--gold); line-height: 1; }
-  .stat-lbl { font-size: 0.75rem; color: var(--slate); margin-top: 0.25rem; letter-spacing: 0.04em; }
+  .stat-lbl { font-size: 0.75rem; color: var(--slate); margin-top: 0.25rem; }
 
-  /* ── WHY ── */
+  /* WHY */
   .section { padding: 3.5rem 1.5rem; max-width: 1080px; margin: 0 auto; }
   .section-eyebrow { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 0.4rem; }
   .section-heading { font-size: 1.6rem; font-weight: 800; color: var(--white); margin-bottom: 0.4rem; }
@@ -106,67 +67,57 @@
   .why-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
   .why-card p { font-size: 0.85rem; color: var(--slate); }
 
-  /* ── SERIES SECTION ── */
-  .series-section { padding: 3rem 1.5rem; max-width: 1080px; margin: 0 auto; }
-  .series-section.alt { background: rgba(17,24,39,0.5); max-width: 100%; padding: 3rem 1.5rem; }
-  .series-section.alt .series-inner { max-width: 1080px; margin: 0 auto; }
+  /* SERIES SECTION */
+  .series-wrap { padding: 3rem 1.5rem; }
+  .series-wrap.alt { background: rgba(17,24,39,0.45); }
+  .series-inner { max-width: 1080px; margin: 0 auto; }
 
-  /* ── SECTION HEADER ── */
-  .section-header {
-    padding-bottom: 1.2rem;
-    border-bottom: 2px solid rgba(245,158,11,0.2);
-    margin-bottom: 1.8rem;
-  }
+  /* SECTION HEADER */
+  .section-header { padding-bottom: 1.2rem; border-bottom: 2px solid rgba(245,158,11,0.2); margin-bottom: 1.8rem; }
   .section-header .eyebrow { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: var(--gold); margin-bottom: 0.3rem; }
   .section-header h2 { font-size: 1.5rem; font-weight: 800; color: var(--white); }
   .section-header p { font-size: 0.88rem; color: var(--slate); margin-top: 0.3rem; max-width: 520px; }
 
-  /* ── TIER BLOCKS (Financial Intelligence) ── */
+  /* ULTIMATE BUNDLE */
+  .ultimate-bundle {
+    background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(249,115,22,0.07));
+    border: 2px solid var(--gold);
+    border-radius: 16px; padding: 1.6rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;
+  }
+  .ultimate-bundle h3 { font-size: 1.1rem; font-weight: 800; color: var(--white); margin-bottom: 0.3rem; }
+  .ultimate-bundle p { font-size: 0.85rem; color: var(--slate); }
+  .ultimate-price { font-size: 1.5rem; font-weight: 800; color: var(--gold); white-space: nowrap; }
+  .ultimate-btn { background: var(--gold); color: var(--navy); padding: 0.65rem 1.5rem; border-radius: 25px; font-weight: 800; font-size: 0.9rem; white-space: nowrap; transition: all 0.2s; display: inline-block; }
+  .ultimate-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  /* TIER BLOCK */
   .tier-block { margin-bottom: 2.5rem; }
-  .tier-block-header {
-    display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap;
-  }
-  .tier-roman {
-    width: 38px; height: 38px; border-radius: 50%;
-    background: rgba(245,158,11,0.12); border: 1.5px solid rgba(245,158,11,0.4);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.85rem; font-weight: 800; color: var(--gold); flex-shrink: 0;
-  }
+  .tier-block-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
+  .tier-roman { width: 38px; height: 38px; border-radius: 50%; background: rgba(245,158,11,0.12); border: 1.5px solid rgba(245,158,11,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 800; color: var(--gold); flex-shrink: 0; }
   .tier-block-header h3 { font-size: 1rem; font-weight: 800; color: var(--white); }
   .tier-block-header p { font-size: 0.82rem; color: var(--slate); }
 
-  /* ── BUNDLE CARD ── */
-  .bundle-card {
-    background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(13,148,136,0.05));
-    border: 1.5px solid rgba(245,158,11,0.4);
-    border-radius: 14px; padding: 1.3rem 1.6rem;
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;
-  }
-  .bundle-card.ultimate {
-    background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(249,115,22,0.08));
-    border-color: var(--gold); border-width: 2px;
-  }
-  .bundle-card.highlight {
-    background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(13,148,136,0.05));
-    border-color: rgba(124,58,237,0.4);
-  }
+  /* BUNDLE CARD */
+  .bundle-card { background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(13,148,136,0.05)); border: 1.5px solid rgba(245,158,11,0.4); border-radius: 14px; padding: 1.3rem 1.6rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+  .bundle-card.highlight { background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(13,148,136,0.05)); border-color: rgba(124,58,237,0.35); }
   .bundle-info h3 { font-size: 1rem; font-weight: 800; color: var(--white); }
   .bundle-info p { font-size: 0.82rem; color: var(--slate); margin-top: 0.2rem; }
   .bundle-right { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
   .bundle-price { font-size: 1.15rem; font-weight: 800; color: var(--gold); white-space: nowrap; }
-  .bundle-price.large { font-size: 1.4rem; }
   .bundle-btn { background: var(--gold); color: var(--navy); padding: 0.5rem 1.2rem; border-radius: 25px; font-weight: 800; font-size: 0.82rem; white-space: nowrap; transition: all 0.2s; display: inline-block; }
   .bundle-btn:hover { background: var(--gold-light); }
 
-  /* ── SUB LABEL ── */
+  /* SUB LABEL */
   .sub-label { font-size: 0.72rem; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 700; color: var(--gold); padding-bottom: 0.5rem; border-bottom: 1px solid rgba(245,158,11,0.18); margin: 1.8rem 0 1rem; }
 
-  /* ── PRODUCT GRID ── */
+  /* PRODUCT GRID */
   .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.85rem; }
-  .product-card { background: var(--navy-card); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.1rem; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.15s; position: relative; }
+  .product-card { background: var(--navy-card); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.1rem; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.15s; }
   .product-card:hover { border-color: rgba(245,158,11,0.35); transform: translateY(-2px); }
   .product-card.is-new { border-color: rgba(245,158,11,0.25); }
-  .new-pill { display: inline-block; background: var(--gold); color: var(--navy); font-size: 0.6rem; font-weight: 800; padding: 0.12rem 0.45rem; border-radius: 6px; letter-spacing: 0.05em; margin-bottom: 0.45rem; align-self: flex-start; }
+  .new-pill { display: inline-block; background: var(--gold); color: var(--navy); font-size: 0.6rem; font-weight: 800; padding: 0.12rem 0.45rem; border-radius: 6px; margin-bottom: 0.45rem; align-self: flex-start; }
   .product-name { font-size: 0.92rem; font-weight: 700; color: var(--white); line-height: 1.3; }
   .product-num { font-size: 0.75rem; color: var(--slate); margin: 0.2rem 0 0.6rem; display: block; }
   .product-desc { font-size: 0.8rem; color: var(--slate); margin-bottom: 0.6rem; flex: 1; }
@@ -175,46 +126,45 @@
   .card-btn { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.4); color: var(--gold); padding: 0.3rem 0.75rem; border-radius: 18px; font-size: 0.75rem; font-weight: 700; transition: all 0.2s; display: inline-block; }
   .card-btn:hover { background: var(--gold); color: var(--navy); }
 
-  /* ── NEW RELEASES CARD ── */
-  .release-card { background: var(--navy-card); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 1.3rem; display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap; transition: border-color 0.2s; }
+  /* NEW RELEASE CARD */
+  .release-card { background: var(--navy-card); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 1.3rem; display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap; transition: border-color 0.2s; margin-bottom: 1rem; }
   .release-card:hover { border-color: rgba(245,158,11,0.35); }
   .release-body { flex: 1; min-width: 200px; }
   .release-body h3 { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
   .release-body p { font-size: 0.82rem; color: var(--slate); }
   .release-footer { display: flex; align-items: center; gap: 1rem; margin-top: 0.8rem; flex-wrap: wrap; }
 
-  /* ── ABOUT ── */
+  /* ABOUT */
   .about-section { background: var(--navy-card); border-top: 1px solid rgba(255,255,255,0.05); padding: 3.5rem 1.5rem; }
   .about-inner { max-width: 680px; margin: 0 auto; }
   .about-inner h2 { font-size: 1.5rem; font-weight: 800; color: var(--white); margin-bottom: 1rem; }
   .about-inner p { font-size: 0.92rem; color: var(--slate); margin-bottom: 0.9rem; }
-  .child-callout { background: rgba(13,148,136,0.08); border: 1px solid rgba(13,148,136,0.3); border-radius: 14px; padding: 1.2rem 1.5rem; margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-  .child-callout p { margin: 0; font-size: 0.88rem; color: var(--light); }
-  .child-callout p strong { color: var(--gold); }
-  .child-btn { background: var(--teal); color: var(--white); padding: 0.5rem 1.2rem; border-radius: 20px; font-weight: 700; font-size: 0.82rem; white-space: nowrap; transition: background 0.2s; display: inline-block; }
-  .child-btn:hover { background: #0f766e; }
+  .callout-box { background: rgba(13,148,136,0.08); border: 1px solid rgba(13,148,136,0.3); border-radius: 14px; padding: 1.2rem 1.5rem; margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .callout-box p { margin: 0; font-size: 0.88rem; color: var(--light); }
+  .callout-box p strong { color: var(--gold); }
+  .callout-btn { background: var(--teal); color: var(--white); padding: 0.5rem 1.2rem; border-radius: 20px; font-weight: 700; font-size: 0.82rem; white-space: nowrap; display: inline-block; }
+  .callout-btn:hover { background: #0f766e; }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,0.05); padding: 2rem 1.5rem; text-align: center; }
   .footer-links { display: flex; gap: 1.4rem; justify-content: center; flex-wrap: wrap; margin-bottom: 0.8rem; }
-  .footer-links a { color: var(--slate); font-size: 0.8rem; transition: color 0.2s; }
+  .footer-links a { color: var(--slate); font-size: 0.8rem; }
   .footer-links a:hover { color: var(--gold); }
   .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); line-height: 1.8; }
   .footer-copy a { color: var(--gold); }
 
   @media (max-width: 640px) {
     .stat-item { padding: 1.2rem 1.4rem; }
-    .bundle-card { flex-direction: column; }
+    .bundle-card, .ultimate-bundle { flex-direction: column; }
     nav { padding: 0.7rem 1rem; }
   }
 </style>
 </head>
 <body>
 
-<!-- SISTER SITE BANNER -->
-<div class="sister-banner">
-  <span>Looking for <strong>AI literacy tools for your children?</strong> Visit our sister site →</span>
-  <a href="https://www.aicreatorlab.store" class="sister-btn">AI Creator Lab™ ↗</a>
+<!-- SISTER NOTICE -->
+<div class="sister-notice">
+  For AI literacy tools for your children, visit our sister site: <a href="https://www.aicreatorlab.store">www.aicreatorlab.store</a>
 </div>
 
 <!-- NAV -->
@@ -223,7 +173,7 @@
   <div class="nav-links">
     <a href="#financial">Financial Intelligence</a>
     <a href="#business">Business & Marketing</a>
-    <a href="#aitools">New Releases</a>
+    <a href="#newreleases">New Releases</a>
     <a href="#productivity">Productivity</a>
     <a href="#about">About</a>
     <a href="https://volareconsultants.gumroad.com" class="nav-cta">Shop All →</a>
@@ -245,7 +195,7 @@
 <div class="stats-row">
   <div class="stat-item"><div class="stat-num">18+</div><div class="stat-lbl">Finance Guides</div></div>
   <div class="stat-item"><div class="stat-num">20+</div><div class="stat-lbl">Biz Workbooks</div></div>
-  <div class="stat-item"><div class="stat-num">8</div><div class="stat-lbl">Productivity</div></div>
+  <div class="stat-item"><div class="stat-num">8</div><div class="stat-lbl">Productivity Tools</div></div>
   <div class="stat-item"><div class="stat-num">USD</div><div class="stat-lbl">Fixed Pricing</div></div>
 </div>
 
@@ -255,34 +205,34 @@
   <div class="section-heading">Built for People Doing the Work Themselves</div>
   <div class="section-sub">No fluff, no upsells buried in chapter three. Every product here is something you can open today and use today.</div>
   <div class="why-grid">
-    <div class="why-card"><div class="why-num">01</div><h3>Plain-Language Finance</h3><p>Retirement, tax, debt, and wealth-building explained the way a sharp friend would explain it — not the way a textbook would.</p></div>
-    <div class="why-card"><div class="why-num">02</div><h3>Built for ASEAN Realities</h3><p>Pricing, examples, and frameworks designed with Southeast Asian entrepreneurs and professionals in mind, not adapted from elsewhere.</p></div>
-    <div class="why-card"><div class="why-num">03</div><h3>Use It Once, Use It For Years</h3><p>These are working documents, not one-time reads. Revisit your planner every quarter as your business or finances grow.</p></div>
-    <div class="why-card"><div class="why-num">04</div><h3>Instant, No Waiting</h3><p>Every product delivers immediately via Gumroad. No onboarding calls, no scheduling — start within minutes of purchase.</p></div>
+    <div class="why-card"><div class="why-num">01</div><h3>Plain-Language Finance</h3><p>Retirement, tax, debt, and wealth-building explained the way a sharp friend would — not the way a textbook would.</p></div>
+    <div class="why-card"><div class="why-num">02</div><h3>Built for ASEAN Realities</h3><p>Pricing, examples, and frameworks designed with Southeast Asian entrepreneurs and professionals in mind.</p></div>
+    <div class="why-card"><div class="why-num">03</div><h3>Use It Once, Use It For Years</h3><p>These are working documents, not one-time reads. Revisit your planner every quarter as your situation evolves.</p></div>
+    <div class="why-card"><div class="why-num">04</div><h3>Instant, No Waiting</h3><p>Every product delivers immediately via Gumroad. No onboarding calls, no scheduling — start within minutes.</p></div>
     <div class="why-card"><div class="why-num">05</div><h3>Bundles That Save Real Money</h3><p>Buy the full tier instead of one workbook at a time, and save meaningfully over buying each piece separately.</p></div>
-    <div class="why-card"><div class="why-num">06</div><h3>One Founder, One Standard</h3><p>Every product is built and reviewed by the same small Singapore-based team — consistent quality, no outsourced filler content.</p></div>
+    <div class="why-card"><div class="why-num">06</div><h3>One Founder, One Standard</h3><p>Every product is built and reviewed by the same Singapore-based team — consistent quality, no filler content.</p></div>
   </div>
 </div>
 
-<!-- ═══════════════════════ FINANCIAL INTELLIGENCE ═══════════════════════ -->
-<div id="financial" style="background: rgba(17,24,39,0.5); padding: 3rem 1.5rem;">
-<div style="max-width:1080px; margin:0 auto;">
-
+<!-- FINANCIAL INTELLIGENCE -->
+<div id="financial" class="series-wrap alt">
+<div class="series-inner">
   <div class="section-header">
     <div class="eyebrow">Financial Intelligence Series</div>
     <h2>18 Guides to Real Financial Confidence</h2>
     <p>From your first emergency fund to legacy planning — a complete, sequential library for building financial intelligence at any stage of life.</p>
   </div>
 
-  <!-- ULTIMATE BUNDLE — top of section, most prominent -->
-  <div class="bundle-card ultimate">
-    <div class="bundle-info">
+  <!-- ULTIMATE BUNDLE — most prominent -->
+  <div class="ultimate-bundle">
+    <div>
       <h3>⭐ Financial Intelligence Series — Ultimate Bundle</h3>
-      <p>All 18 guides across all three tiers in one complete collection. The full journey from financial foundations to mastery.</p>
+      <p>All 18 guides across all three tiers in one complete collection. The full journey from financial foundations to mastery.<br>
+      <span style="color:var(--gold);font-size:0.82rem;">Saves USD 11 vs buying the three tier bundles separately.</span></p>
     </div>
-    <div class="bundle-right">
-      <span class="bundle-price large">USD 97</span>
-      <a href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-ultimate-bundle" class="bundle-btn">Get the Ultimate Bundle →</a>
+    <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+      <span class="ultimate-price">USD 97</span>
+      <a href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-ultimate-bundle" class="ultimate-btn">Get the Ultimate Bundle →</a>
     </div>
   </div>
 
@@ -293,7 +243,7 @@
       <div><h3>Tier 1 — Foundations</h3><p>Income, budgeting, debt, and your first investments.</p></div>
     </div>
     <div class="bundle-card">
-      <div class="bundle-info"><h3>★ Tier 1 Bundle — Foundations</h3><p>6 guides covering the essential starting point for financial clarity.</p></div>
+      <div class="bundle-info"><h3>★ Tier 1 Bundle — Foundations</h3><p>All 6 Foundations guides in one bundle.</p></div>
       <div class="bundle-right"><span class="bundle-price">USD 36</span><a href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-tier-1-bundle" class="bundle-btn">Get the Bundle →</a></div>
     </div>
     <div class="product-grid">
@@ -313,7 +263,7 @@
       <div><h3>Tier 2 — Growth</h3><p>Wealth-building, tax, property, protection, and retirement.</p></div>
     </div>
     <div class="bundle-card">
-      <div class="bundle-info"><h3>★ Tier 2 Bundle — Growth</h3><p>6 guides for building and protecting wealth as it grows.</p></div>
+      <div class="bundle-info"><h3>★ Tier 2 Bundle — Growth</h3><p>All 6 Growth guides in one bundle.</p></div>
       <div class="bundle-right"><span class="bundle-price">USD 36</span><a href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-tier-2-bundle" class="bundle-btn">Get the Bundle →</a></div>
     </div>
     <div class="product-grid">
@@ -333,7 +283,7 @@
       <div><h3>Tier 3 — Mastery</h3><p>Advanced investing, business wealth, debt strategy, and legacy.</p></div>
     </div>
     <div class="bundle-card">
-      <div class="bundle-info"><h3>★ Tier 3 Bundle — Mastery</h3><p>6 guides for advanced financial mastery and legacy planning.</p></div>
+      <div class="bundle-info"><h3>★ Tier 3 Bundle — Mastery</h3><p>All 6 Mastery guides in one bundle.</p></div>
       <div class="bundle-right"><span class="bundle-price">USD 36</span><a href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-tier-3-bundle" class="bundle-btn">Get the Bundle →</a></div>
     </div>
     <div class="product-grid">
@@ -345,24 +295,23 @@
       <div class="product-card"><div class="product-name">My Financial Mastery Plan</div><div class="card-footer"><span class="card-price">USD 7</span><a href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-18-my-financial-mastery-plan" class="card-btn">Get It Now →</a></div></div>
     </div>
   </div>
-
 </div></div>
 
-<!-- ═══════════════════════ BUSINESS & MARKETING ═══════════════════════ -->
-<div id="business" style="padding: 3rem 1.5rem;">
-<div style="max-width:1080px; margin:0 auto;">
-
+<!-- BUSINESS & MARKETING -->
+<div id="business" class="series-wrap">
+<div class="series-inner">
   <div class="section-header">
     <div class="eyebrow">Business & Marketing</div>
     <h2>Workbooks for Launching & Growing</h2>
     <p>From your first business plan to a full content strategy — practical workbooks for solo founders and small teams.</p>
   </div>
-
-  <div class="bundle-card ultimate">
-    <div class="bundle-info"><h3>★ The Complete Digital Entrepreneur Toolkit — Ultimate Bundle</h3><p>Every business and marketing workbook in one complete collection.</p></div>
-    <div class="bundle-right"><span class="bundle-price large">USD 49</span><a href="https://volareconsultants.gumroad.com/l/ultimate-bundle" class="bundle-btn">Get the Bundle →</a></div>
+  <div class="ultimate-bundle">
+    <div><h3>★ The Complete Digital Entrepreneur Toolkit — Ultimate Bundle</h3><p>Every business and marketing workbook in one complete collection.</p></div>
+    <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+      <span class="ultimate-price">USD 49</span>
+      <a href="https://volareconsultants.gumroad.com/l/ultimate-bundle" class="ultimate-btn">Get the Bundle →</a>
+    </div>
   </div>
-
   <div class="sub-label">Starting & Launching</div>
   <div class="product-grid">
     <div class="product-card"><div class="product-name">Online Business Starter Planner</div><div class="card-footer"><span class="card-price">USD 7</span><a href="https://volareconsultants.gumroad.com/l/business-starter" class="card-btn">Get It Now →</a></div></div>
@@ -374,7 +323,6 @@
     <div class="bundle-info"><h3>★ Business Builder Kit — 4 Workbooks</h3><p>All 4 starting & launching workbooks in one bundle.</p></div>
     <div class="bundle-right"><span class="bundle-price">USD 19</span><a href="https://volareconsultants.gumroad.com/l/business-builder-kit" class="bundle-btn">Get the Bundle →</a></div>
   </div>
-
   <div class="sub-label">Content & Social Media</div>
   <div class="product-grid">
     <div class="product-card"><div class="product-name">Social Media Strategy Workbook</div><div class="card-footer"><span class="card-price">USD 7</span><a href="https://volareconsultants.gumroad.com/l/social-strategy" class="card-btn">Get It Now →</a></div></div>
@@ -386,7 +334,6 @@
     <div class="bundle-info"><h3>★ Content Creator Toolkit — 4 Workbooks</h3><p>All 4 content & social media workbooks in one bundle.</p></div>
     <div class="bundle-right"><span class="bundle-price">USD 19</span><a href="https://volareconsultants.gumroad.com/l/content-creator-toolkit" class="bundle-btn">Get the Bundle →</a></div>
   </div>
-
   <div class="sub-label">Digital Products & Pricing</div>
   <div class="product-grid">
     <div class="product-card"><div class="product-name">Digital Product Ideas Generator — 200 Niche Ideas</div><div class="card-footer"><span class="card-price">USD 7</span><a href="https://volareconsultants.gumroad.com/l/ideas-generator" class="card-btn">Get It Now →</a></div></div>
@@ -398,7 +345,6 @@
     <div class="bundle-info"><h3>★ Complete Digital Product Starter Kit — 4 Workbooks</h3><p>All 4 digital product & pricing workbooks in one bundle.</p></div>
     <div class="bundle-right"><span class="bundle-price">USD 19</span><a href="https://volareconsultants.gumroad.com/l/starter-kit-bundle" class="bundle-btn">Get the Bundle →</a></div>
   </div>
-
   <div class="sub-label">Marketing Mastery</div>
   <div class="product-grid">
     <div class="product-card"><div class="product-name">Marketing Strategy Workbook — Advanced</div><div class="card-footer"><span class="card-price">USD 9</span><a href="https://volareconsultants.gumroad.com/l/marketing-strategy" class="card-btn">Get It Now →</a></div></div>
@@ -409,55 +355,46 @@
     <div class="bundle-info"><h3>★ Marketing Mastery Kit — 3 Workbooks</h3><p>Marketing Strategy, Ads Tracker, and Email Planner in one bundle.</p></div>
     <div class="bundle-right"><span class="bundle-price">USD 17</span><a href="https://volareconsultants.gumroad.com/l/marketing-mastery-kit" class="bundle-btn">Get the Bundle →</a></div>
   </div>
-
 </div></div>
 
-<!-- ═══════════════════════ NEW RELEASES ═══════════════════════ -->
-<div id="aitools" style="background: rgba(17,24,39,0.5); padding: 3rem 1.5rem;">
-<div style="max-width:1080px; margin:0 auto;">
-
+<!-- NEW RELEASES -->
+<div id="newreleases" class="series-wrap alt">
+<div class="series-inner">
   <div class="section-header">
     <div class="eyebrow">New Releases</div>
     <h2>Fresh From the Library</h2>
     <p>The latest additions — practical playbooks for founders, parents, and anyone building a better financial future.</p>
   </div>
-
-  <div style="display:flex; flex-direction:column; gap:1rem;">
-    <div class="release-card">
-      <div class="release-body">
-        <span class="new-pill">New</span>
-        <h3>The Solo Founder's AI Playbook</h3>
-        <p>22 pages · 20 ready-to-use prompts · AI workflow planner. Save time, cut costs, and grow faster — starting today.</p>
-        <div class="release-footer"><span style="font-size:1rem; font-weight:800; color:var(--gold);">USD 7</span><a href="https://volareconsultants.gumroad.com/l/the-solo-founder-ai-playbook" class="card-btn">Get It Now →</a></div>
-      </div>
-    </div>
-    <div class="release-card">
-      <div class="release-body">
-        <span class="new-pill">New</span>
-        <h3>The Family Money Playbook</h3>
-        <p>28 pages · 3 age tiers (8–11, 11–14, 14–17) · conversation scripts + family activities. Raise money-smart kids at every stage.</p>
-        <div class="release-footer"><span style="font-size:1rem; font-weight:800; color:var(--gold);">USD 7</span><a href="https://volareconsultants.gumroad.com/l/the-family-money-playbook" class="card-btn">Get It Now →</a></div>
-      </div>
+  <div class="release-card">
+    <div class="release-body">
+      <span class="new-pill">New</span>
+      <h3>The Solo Founder's AI Playbook</h3>
+      <p>22 pages · 20 ready-to-use prompts · AI workflow planner. Save time, cut costs, and grow faster — starting today.</p>
+      <div class="release-footer"><span style="font-size:1rem;font-weight:800;color:var(--gold);">USD 7</span><a href="https://volareconsultants.gumroad.com/l/the-solo-founder-ai-playbook" class="card-btn">Get It Now →</a></div>
     </div>
   </div>
-
+  <div class="release-card">
+    <div class="release-body">
+      <span class="new-pill">New</span>
+      <h3>The Family Money Playbook</h3>
+      <p>28 pages · 3 age tiers (8–11, 11–14, 14–17) · conversation scripts + family activities. Raise money-smart kids at every stage.</p>
+      <div class="release-footer"><span style="font-size:1rem;font-weight:800;color:var(--gold);">USD 7</span><a href="https://volareconsultants.gumroad.com/l/the-family-money-playbook" class="card-btn">Get It Now →</a></div>
+    </div>
+  </div>
 </div></div>
 
-<!-- ═══════════════════════ PRODUCTIVITY ═══════════════════════ -->
-<div id="productivity" style="padding: 3rem 1.5rem;">
-<div style="max-width:1080px; margin:0 auto;">
-
+<!-- PRODUCTIVITY -->
+<div id="productivity" class="series-wrap">
+<div class="series-inner">
   <div class="section-header">
     <div class="eyebrow">Productivity & Lifestyle</div>
     <h2>Stay On Top of Your Day, Money & Goals</h2>
     <p>Simple, practical trackers and planners for daily life — independent of any business or financial tier.</p>
   </div>
-
   <div class="bundle-card">
     <div class="bundle-info"><h3>★ The Lifestyle Essentials Bundle</h3><p>All productivity and lifestyle tools in one collection.</p></div>
     <div class="bundle-right"><span class="bundle-price">USD 15</span><a href="https://volareconsultants.gumroad.com/l/lifestyle-bundle" class="bundle-btn">Get the Bundle →</a></div>
   </div>
-
   <div class="product-grid">
     <div class="product-card"><div class="product-name">Daily Productivity Planner</div><div class="card-footer"><span class="card-price">USD 5</span><a href="https://volareconsultants.gumroad.com/l/daily-productivity-planner" class="card-btn">Get It Now →</a></div></div>
     <div class="product-card"><div class="product-name">Goal Setting & Habit Tracker Workbook</div><div class="card-footer"><span class="card-price">USD 5</span><a href="https://volareconsultants.gumroad.com/l/goal-setting-habit-tracker" class="card-btn">Get It Now →</a></div></div>
@@ -468,7 +405,6 @@
     <div class="product-card is-new"><span class="new-pill">New</span><div class="product-name">Client Onboarding Checklist</div><span class="product-num">Start every client relationship the right way.</span><div class="card-footer"><span class="card-price">USD 5</span><a href="https://volareconsultants.gumroad.com/l/client-onboarding-checklist" class="card-btn">Get It Now →</a></div></div>
     <div class="product-card is-new"><span class="new-pill">New</span><div class="product-name">Freelancer Rate Calculator</div><span class="product-num">Stop guessing your rate. 5-part calculator.</span><div class="card-footer"><span class="card-price">USD 7</span><a href="https://volareconsultants.gumroad.com/l/freelancer-rate-calculator" class="card-btn">Get It Now →</a></div></div>
   </div>
-
 </div></div>
 
 <!-- ABOUT -->
@@ -477,9 +413,9 @@
     <h2>About Volare Consultants</h2>
     <p>Volare Consultants is a Singapore sole proprietorship building practical digital tools for the people doing the actual work — entrepreneurs, professionals, and individuals managing their own finances and businesses across ASEAN.</p>
     <p>Every guide and workbook is delivered instantly via Gumroad, priced in USD, and built to be used immediately — not filed away unread.</p>
-    <div class="child-callout">
-      <p>Looking for <strong>AI literacy tools for your children?</strong><br>Visit AI Creator Lab™ — our sister programme for ages 8–17 across ASEAN.<br><span style="font-size:0.82rem; color:var(--slate);">aicreatorlab.store</span></p>
-      <a href="https://www.aicreatorlab.store" class="child-btn">Visit AI Creator Lab™ →</a>
+    <div class="callout-box">
+      <p>Looking for <strong>AI literacy tools for your children?</strong><br>Visit AI Creator Lab™ — our sister programme for ages 8–17 across ASEAN.<br><span style="font-size:0.82rem;color:var(--slate);">www.aicreatorlab.store</span></p>
+      <a href="https://www.aicreatorlab.store" class="callout-btn">Visit AI Creator Lab™ →</a>
     </div>
   </div>
 </div>
@@ -489,7 +425,7 @@
   <div class="footer-links">
     <a href="#financial">Financial Intelligence</a>
     <a href="#business">Business & Marketing</a>
-    <a href="#aitools">New Releases</a>
+    <a href="#newreleases">New Releases</a>
     <a href="#productivity">Productivity</a>
     <a href="https://volareconsultants.gumroad.com">Shop on Gumroad</a>
     <a href="https://www.aicreatorlab.store">AI Creator Lab™</a>
