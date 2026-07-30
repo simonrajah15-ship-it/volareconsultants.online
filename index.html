@@ -468,6 +468,32 @@
   .footer-nav a { color: #64748b; text-decoration: none; }
   .footer-nav a:hover { color: var(--gold); }
 
+  /* ── COLLAPSIBLE GUIDE LISTS ── */
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--white);
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+    padding: 0.7rem 1.1rem;
+    margin: 0.75rem 0 1.25rem;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 0.88rem;
+    color: var(--navy);
+    user-select: none;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .toggle-row:hover { background: var(--gold-light); border-color: var(--gold); }
+  .toggle-row .chev { transition: transform 0.2s; font-size: 0.75rem; color: var(--gold-dark); }
+  .collapsible.open .toggle-row .chev { transform: rotate(90deg); }
+  .toggle-row .toggle-label-open { display: none; }
+  .collapsible.open .toggle-row .toggle-label-closed { display: none; }
+  .collapsible.open .toggle-row .toggle-label-open { display: inline; }
+  .collapsible-body { display: none; }
+  .collapsible.open .collapsible-body { display: block; }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 600px) {
     nav { padding: 0.75rem 1rem; }
@@ -492,6 +518,7 @@
   <div class="nav-links">
     <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Resource</a> <a href="#learn" style="color:var(--teal);font-weight:800;">Learning Center</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#financial">Financial Intelligence</a>
     <a href="#girlbossfree" style="color:var(--rose-dark);font-weight:800;">Girl Boss Essentials</a>
+    <a href="#foundergrowth" style="color:var(--rose-dark);font-weight:800;">Founder Growth Series</a>
     <a href="#womenswealth" style="color:var(--burgundy);font-weight:800;">Women's Wealth</a>
     <a href="#business">Business &amp; Marketing</a>
     <a href="#gigfreelance">Gig &amp; Freelance</a>
@@ -886,6 +913,13 @@
           <a class="btn-bundle" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-tier-1-bundle" target="_blank">Get the Bundle →</a>
         </div>
       </div>
+      <div class="collapsible">
+        <div class="toggle-row">
+          <span class="chev">▶</span>
+          <span class="toggle-label-closed">Show all 6 guides ▾</span>
+          <span class="toggle-label-open">Hide guides ▲</span>
+        </div>
+        <div class="collapsible-body">
       <div class="product-grid">
         <div class="product-card">
           <div class="product-label">Guide 1</div>
@@ -920,6 +954,8 @@
           <div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-6-my-financial-foundations-plan" target="_blank">Get It Now →</a></div>
         </div>
       </div>
+        </div>
+      </div>
     </div>
 
     <!-- Tier 2 -->
@@ -935,6 +971,13 @@
           <a class="btn-bundle" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-tier-2-bundle" target="_blank">Get the Bundle →</a>
         </div>
       </div>
+      <div class="collapsible">
+        <div class="toggle-row">
+          <span class="chev">▶</span>
+          <span class="toggle-label-closed">Show all 6 guides ▾</span>
+          <span class="toggle-label-open">Hide guides ▲</span>
+        </div>
+        <div class="collapsible-body">
       <div class="product-grid">
         <div class="product-card"><div class="product-label">Guide 7</div><div class="product-title">The Wealth Multiplier</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-7-the-wealth-multiplier" target="_blank">Get It Now →</a></div></div>
         <div class="product-card"><div class="product-label">Guide 8</div><div class="product-title">The Tax Optimiser</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-8-the-tax-optimiser" target="_blank">Get It Now →</a></div></div>
@@ -942,6 +985,8 @@
         <div class="product-card"><div class="product-label">Guide 10</div><div class="product-title">The Protection Planner</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-10-the-protection-planner" target="_blank">Get It Now →</a></div></div>
         <div class="product-card"><div class="product-label">Guide 11</div><div class="product-title">The Retirement Architect</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-11-the-retirement-architect" target="_blank">Get It Now →</a></div></div>
         <div class="product-card"><div class="product-label">Guide 12</div><div class="product-title">My Financial Growth Plan</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-12-my-financial-growth-plan" target="_blank">Get It Now →</a></div></div>
+      </div>
+        </div>
       </div>
     </div>
 
@@ -958,6 +1003,13 @@
           <a class="btn-bundle" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-tier-3-bundle" target="_blank">Get the Bundle →</a>
         </div>
       </div>
+      <div class="collapsible">
+        <div class="toggle-row">
+          <span class="chev">▶</span>
+          <span class="toggle-label-closed">Show all 6 guides ▾</span>
+          <span class="toggle-label-open">Hide guides ▲</span>
+        </div>
+        <div class="collapsible-body">
       <div class="product-grid">
         <div class="product-card"><div class="product-label">Guide 13</div><div class="product-title">The Investment Strategist</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-13-the-investment-strategist" target="_blank">Get It Now →</a></div></div>
         <div class="product-card"><div class="product-label">Guide 14</div><div class="product-title">The Business Builder</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-14-the-business-builder" target="_blank">Get It Now →</a></div></div>
@@ -965,6 +1017,8 @@
         <div class="product-card"><div class="product-label">Guide 16</div><div class="product-title">The Legacy Planner</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-16-the-legacy-planner" target="_blank">Get It Now →</a></div></div>
         <div class="product-card"><div class="product-label">Guide 17</div><div class="product-title">The Global Wealth Navigator</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-17-the-global-wealth-navigator" target="_blank">Get It Now →</a></div></div>
         <div class="product-card"><div class="product-label">Guide 18</div><div class="product-title">My Financial Mastery Plan</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-18-my-financial-mastery-plan" target="_blank">Get It Now →</a></div></div>
+      </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1006,6 +1060,62 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════
+     WOMEN FOUNDER GROWTH SERIES — FREE 5-BOOK SERIES
+════════════════════════════════════════════════ -->
+<div id="foundergrowth" class="prod-section" style="background:var(--blush-light);">
+  <div class="prod-inner">
+    <div class="prod-header">
+      <div style="display:inline-block;background:var(--blush);color:var(--rose-dark);font-size:0.75rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:20px;margin-bottom:0.9rem;">Free 5-Book Series · No Payment Required</div>
+      <h2 style="color:var(--rose-dark);">Women Founder Growth Series</h2>
+      <p>Five free books for young women and women business owners — from confidence and learning, through finding ideas, creating content, and building visibility, to selling with confidence. A complete founder-growth pathway, start to finish.</p>
+    </div>
+
+    <div class="collapsible">
+      <div class="toggle-row">
+        <span class="chev">▶</span>
+        <span class="toggle-label-closed">Show all 5 free books ▾</span>
+        <span class="toggle-label-open">Hide books ▲</span>
+      </div>
+      <div class="collapsible-body">
+        <div class="product-grid">
+          <div class="product-card" style="border-color:var(--rose-light);">
+            <div class="product-label" style="color:var(--rose-dark);">Book 1 of 5 · Free</div>
+            <div class="product-title">Learn, Grow, Lead</div>
+            <div class="product-detail">Builds confidence, learning habits, and a leadership mindset — the foundation for the whole series.</div>
+            <div class="product-footer"><span class="product-price" style="color:var(--rose-dark);">FREE</span><a class="btn-get" style="background:var(--rose);" href="https://volareconsultants.gumroad.com/l/women-founder-growth-series-learn-grow-lead-free" target="_blank">Download Free →</a></div>
+          </div>
+          <div class="product-card" style="border-color:var(--rose-light);">
+            <div class="product-label" style="color:var(--rose-dark);">Book 2 of 5 · Free</div>
+            <div class="product-title">Spot Ideas, Find Opportunities</div>
+            <div class="product-detail">Turns everyday experiences, questions, and problems into real business ideas.</div>
+            <div class="product-footer"><span class="product-price" style="color:var(--rose-dark);">FREE</span><a class="btn-get" style="background:var(--rose);" href="https://volareconsultants.gumroad.com/l/women-founder-growth-series-spot-ideas-find-opportunities-free" target="_blank">Download Free →</a></div>
+          </div>
+          <div class="product-card" style="border-color:var(--rose-light);">
+            <div class="product-label" style="color:var(--rose-dark);">Book 3 of 5 · Free</div>
+            <div class="product-title">Create with Confidence</div>
+            <div class="product-detail">Turns ideas into clear, useful content that actually connects with an audience.</div>
+            <div class="product-footer"><span class="product-price" style="color:var(--rose-dark);">FREE</span><a class="btn-get" style="background:var(--rose);" href="https://volareconsultants.gumroad.com/l/women-founder-growth-series-create-with-confidence-free" target="_blank">Download Free →</a></div>
+          </div>
+          <div class="product-card" style="border-color:var(--rose-light);">
+            <div class="product-label" style="color:var(--rose-dark);">Book 4 of 5 · Free</div>
+            <div class="product-title">Build Visibility with Confidence</div>
+            <div class="product-detail">Communicating clearly, consistently, and sustainably so the right people notice.</div>
+            <div class="product-footer"><span class="product-price" style="color:var(--rose-dark);">FREE</span><a class="btn-get" style="background:var(--rose);" href="https://volareconsultants.gumroad.com/l/women-founder-growth-series-build-visibility-with-confidence-free" target="_blank">Download Free →</a></div>
+          </div>
+          <div class="product-card" style="border-color:var(--rose-light);">
+            <div class="product-label" style="color:var(--rose-dark);">Book 5 of 5 · Free</div>
+            <div class="product-title">Sell with Confidence</div>
+            <div class="product-detail">Turns visible value into clear offers, trust, and ethical sales — completing the journey.</div>
+            <div class="product-footer"><span class="product-price" style="color:var(--rose-dark);">FREE</span><a class="btn-get" style="background:var(--rose);" href="https://volareconsultants.gumroad.com/l/women-founder-growth-series-sell-with-confidence-free" target="_blank">Download Free →</a></div>
+          </div>
+        </div>
+        <p style="color:var(--muted);font-size:0.82rem;margin-top:1.25rem;">You will be taken to Gumroad. Price is already set to 0. Download instantly.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
      WOMEN'S WEALTH & BUSINESS SERIES
 ════════════════════════════════════════════════ -->
 <div id="womenswealth" class="prod-section" style="background:var(--bg);">
@@ -1027,6 +1137,13 @@
       </div>
     </div>
 
+    <div class="collapsible">
+      <div class="toggle-row">
+        <span class="chev">▶</span>
+        <span class="toggle-label-closed">Show all 9 guides ▾</span>
+        <span class="toggle-label-open">Hide guides ▲</span>
+      </div>
+      <div class="collapsible-body">
     <div class="subsection-label">Foundations</div>
     <div class="product-grid">
       <div class="product-card">
@@ -1096,6 +1213,8 @@
         <div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/my-financial-independence-plan-womens-edition" target="_blank">Get It Now →</a></div>
       </div>
     </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1121,11 +1240,20 @@
     </div>
 
     <div class="subsection-label">Starting &amp; Launching</div>
+    <div class="collapsible">
+      <div class="toggle-row">
+        <span class="chev">▶</span>
+        <span class="toggle-label-closed">Show all 4 workbooks ▾</span>
+        <span class="toggle-label-open">Hide workbooks ▲</span>
+      </div>
+      <div class="collapsible-body">
     <div class="product-grid">
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Online Business Starter Planner</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/business-starter" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Online Business Growth Planner</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/business-growth" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Business Launch Checklist &amp; Timeline</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/launch-checklist" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Competitor Analysis Workbook</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/competitor-analysis" target="_blank">Get It Now →</a></div></div>
+    </div>
+      </div>
     </div>
     <div class="bundle-card" style="margin-top:1rem;">
       <div class="bundle-card-text"><h3>★ Business Builder Kit — 4 Workbooks</h3><p>All 4 starting &amp; launching workbooks in one bundle.</p></div>
@@ -1133,11 +1261,20 @@
     </div>
 
     <div class="subsection-label">Content &amp; Social Media</div>
+    <div class="collapsible">
+      <div class="toggle-row">
+        <span class="chev">▶</span>
+        <span class="toggle-label-closed">Show all 4 workbooks ▾</span>
+        <span class="toggle-label-open">Hide workbooks ▲</span>
+      </div>
+      <div class="collapsible-body">
     <div class="product-grid">
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Social Media Strategy Workbook</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/social-strategy" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">90-Day Content Calendar &amp; Planner</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/content-calendar" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Content Hooks Playbook — Beginner Edition</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/content-hooks" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Content Hooks Playbook — Creator Edition</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/content-hooks-creator" target="_blank">Get It Now →</a></div></div>
+    </div>
+      </div>
     </div>
     <div class="bundle-card" style="margin-top:1rem;">
       <div class="bundle-card-text"><h3>★ Content Creator Toolkit — 4 Workbooks</h3><p>All 4 content &amp; social media workbooks in one bundle.</p></div>
@@ -1145,11 +1282,20 @@
     </div>
 
     <div class="subsection-label">Digital Products &amp; Pricing</div>
+    <div class="collapsible">
+      <div class="toggle-row">
+        <span class="chev">▶</span>
+        <span class="toggle-label-closed">Show all 4 workbooks ▾</span>
+        <span class="toggle-label-open">Hide workbooks ▲</span>
+      </div>
+      <div class="collapsible-body">
     <div class="product-grid">
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Digital Product Ideas Generator — 200 Niche Ideas</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/ideas-generator" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Digital Product Pricing &amp; Profit Calculator</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/pricing-calculator" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Digital Product Launch Workbook — ASEAN Beginner Edition</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/volare-workbook" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Digital Product Launch Workbook — Growth Edition</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/growth-workbook" target="_blank">Get It Now →</a></div></div>
+    </div>
+      </div>
     </div>
     <div class="bundle-card" style="margin-top:1rem;">
       <div class="bundle-card-text"><h3>★ Complete Digital Product Starter Kit — 4 Workbooks</h3><p>All 4 digital product &amp; pricing workbooks in one bundle.</p></div>
@@ -1157,10 +1303,19 @@
     </div>
 
     <div class="subsection-label">Marketing Mastery</div>
+    <div class="collapsible">
+      <div class="toggle-row">
+        <span class="chev">▶</span>
+        <span class="toggle-label-closed">Show all 3 workbooks ▾</span>
+        <span class="toggle-label-open">Hide workbooks ▲</span>
+      </div>
+      <div class="collapsible-body">
     <div class="product-grid">
       <div class="product-card"><div class="product-label">Workbook · Advanced</div><div class="product-title">Marketing Strategy Workbook</div><div class="product-footer"><span class="product-price">USD 9</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/marketing-strategy" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Ads Tracker &amp; ROI Calculator</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/ads-tracker" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Workbook</div><div class="product-title">Email Marketing Campaign Planner</div><div class="product-footer"><span class="product-price">USD 5</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/email-planner" target="_blank">Get It Now →</a></div></div>
+    </div>
+      </div>
     </div>
     <div class="bundle-card" style="margin-top:1rem;">
       <div class="bundle-card-text"><h3>★ Marketing Mastery Kit — 3 Workbooks</h3><p>Marketing Strategy, Ads Tracker, and Email Planner in one bundle.</p></div>
@@ -1185,6 +1340,13 @@
       <div class="bundle-price-group"><div class="bundle-price">USD 27</div><a class="btn-bundle" href="https://volareconsultants.gumroad.com/l/gig-and-freelance-starter-bundle" target="_blank">Get the Bundle →</a></div>
     </div>
 
+    <div class="collapsible">
+      <div class="toggle-row">
+        <span class="chev">▶</span>
+        <span class="toggle-label-closed">Show all 5 guides ▾</span>
+        <span class="toggle-label-open">Hide guides ▲</span>
+      </div>
+      <div class="collapsible-body">
     <div class="product-grid" style="margin-top:1rem;">
       <div class="product-card">
         <div class="product-label">Guide 1 · PDF + EPUB</div>
@@ -1215,6 +1377,8 @@
         <div class="product-title">The Feast-or-Famine Survival Fund Calculator</div>
         <div class="product-detail">"3–6 months" is a rule for someone else's income — this one calculates yours.</div>
         <div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/the-feast-or-famine-survival-fund-calculator" target="_blank">Get It Now →</a></div>
+      </div>
+    </div>
       </div>
     </div>
   </div>
@@ -1261,6 +1425,13 @@
       <div class="bundle-price-group"><div class="bundle-price">USD 15</div><a class="btn-bundle" href="https://volareconsultants.gumroad.com/l/lifestyle-bundle" target="_blank">Get the Bundle →</a></div>
     </div>
 
+    <div class="collapsible">
+      <div class="toggle-row">
+        <span class="chev">▶</span>
+        <span class="toggle-label-closed">Show all 8 tools ▾</span>
+        <span class="toggle-label-open">Hide tools ▲</span>
+      </div>
+      <div class="collapsible-body">
     <div class="product-grid">
       <div class="product-card"><div class="product-label">Planner</div><div class="product-title">Daily Productivity Planner</div><div class="product-footer"><span class="product-price">USD 5</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/daily-productivity-planner" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label">Tracker</div><div class="product-title">Goal Setting &amp; Habit Tracker Workbook</div><div class="product-footer"><span class="product-price">USD 5</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/goal-setting-habit-tracker" target="_blank">Get It Now →</a></div></div>
@@ -1270,6 +1441,8 @@
       <div class="product-card"><div class="product-label new-tag">New · Tracker</div><div class="product-title">Project Launch Tracker</div><div class="product-detail">From idea to live — every step, nothing missed.</div><div class="product-footer"><span class="product-price">USD 5</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/project-launch-tracker" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label new-tag">New · Checklist</div><div class="product-title">Client Onboarding Checklist</div><div class="product-detail">Start every client relationship the right way.</div><div class="product-footer"><span class="product-price">USD 5</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/client-onboarding-checklist" target="_blank">Get It Now →</a></div></div>
       <div class="product-card"><div class="product-label new-tag">New · Calculator</div><div class="product-title">Freelancer Rate Calculator</div><div class="product-detail">Stop guessing your rate. 5-part calculator.</div><div class="product-footer"><span class="product-price">USD 7</span><a class="btn-get" href="https://volareconsultants.gumroad.com/l/freelancer-rate-calculator" target="_blank">Get It Now →</a></div></div>
+    </div>
+      </div>
     </div>
   </div>
 </div>
@@ -1295,6 +1468,7 @@
   <div class="footer-nav">
     <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Resource</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#financial">Financial Intelligence</a>
     <a href="#girlbossfree" style="color:var(--rose-dark);font-weight:800;">Girl Boss Essentials</a>
+    <a href="#foundergrowth" style="color:var(--rose-dark);font-weight:800;">Founder Growth Series</a>
     <a href="#womenswealth" style="color:var(--burgundy);font-weight:800;">Women's Wealth</a>
     <a href="#business">Business &amp; Marketing</a>
     <a href="#gigfreelance">Gig &amp; Freelance</a>
@@ -1307,5 +1481,13 @@
   <p style="margin-top:0.4rem;">© 2026 Volare Consultants. All rights reserved. Made in Singapore. Digital products delivered via Gumroad.</p>
 </footer>
 
+<script>
+  document.querySelectorAll('.toggle-row').forEach(function(row){
+    row.addEventListener('click', function(){
+      var wrap = row.closest('.collapsible');
+      if (wrap) { wrap.classList.toggle('open'); }
+    });
+  });
+</script>
 </body>
 </html>
