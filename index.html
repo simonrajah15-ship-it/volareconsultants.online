@@ -520,7 +520,7 @@
 <nav>
   <a class="nav-brand" href="#">Volare <span>Consultants</span></a>
   <div class="nav-links">
-    <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Resource</a> <a href="#learn" style="color:var(--teal);font-weight:800;">Learning Center</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#financial">Financial Intelligence</a>
+    <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Resource</a> <a href="#learn" style="color:var(--teal);font-weight:800;">Insight Center</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#financial">Financial Intelligence</a>
     <a href="#girlbossfree" style="color:var(--rose-dark);font-weight:800;">Girl Boss Essentials</a>
     <a href="#foundergrowth" style="color:var(--rose-dark);font-weight:800;">Founder Growth Series</a>
     <a href="#gracefulgrowth" style="color:var(--plum);font-weight:800;">Graceful Growth Series</a>
@@ -562,22 +562,37 @@
      LEARNING CENTER (full articles, in-page)
 ════════════════════════════════════════════════ -->
 <div id="learn" style="background:#ffffff;padding:3.5rem 2rem;border-bottom:1px solid #e2e8f0;">
+  <style>
+    .insight-art-header { cursor:pointer; -webkit-tap-highlight-color:transparent; }
+    .insight-art-header:hover { filter:brightness(1.08); }
+    .insight-chevron { transition:transform 0.2s; }
+    .insight-art-body.collapsed { display:none; }
+    .insight-art.open .insight-chevron { transform:rotate(90deg); }
+  </style>
   <div style="max-width:760px;margin:0 auto;">
 
     <div style="text-align:center;margin-bottom:2.5rem;">
-      <div style="display:inline-block;background:#fef3c7;color:#d97706;font-size:0.75rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:20px;margin-bottom:0.9rem;">The Learning Center · Free</div>
-      <h2 style="font-family:'Fredoka One',cursive;font-size:1.9rem;color:#0a0f1e;margin-bottom:0.5rem;">Read, learn, and enjoy the journey.</h2>
-      <p style="color:#64748b;font-size:0.97rem;max-width:560px;margin:0 auto;">Plain-English explainers on money and business — free, and growing regularly. No payment required, ever.</p>
+      <div style="display:inline-block;background:#fef3c7;color:#d97706;font-size:0.75rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:20px;margin-bottom:0.9rem;">The Insight Center · Free</div>
+      <h2 style="font-family:'Fredoka One',cursive;font-size:1.9rem;color:#0a0f1e;margin-bottom:0.5rem;">Read, learn, and grow with clarity.</h2>
+      <p style="color:#64748b;font-size:0.97rem;max-width:560px;margin:0 auto;">Plain-English explainers and current insight on money and business — free, and refreshed regularly. No payment required, ever.</p>
     </div>
 
-    <!-- ARTICLE 1: COMPOUND INTEREST -->
-    <div style="border:1px solid #fde68a;border-radius:16px;overflow:hidden;margin-bottom:2rem;">
-      <div style="background:linear-gradient(135deg,#0a0f1e 0%,#1a2744 100%);padding:1.75rem 2rem;">
-        <div style="display:inline-block;background:rgba(245,158,11,0.15);color:#f59e0b;font-size:0.7rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:20px;margin-bottom:0.9rem;">Investing</div>
-        <h3 style="font-family:'Fredoka One',cursive;font-size:1.5rem;color:#ffffff;line-height:1.3;">Compound Interest: The Most Powerful Force in Personal Finance</h3>
-        <p style="color:#cbd5e1;font-size:0.88rem;margin-top:0.4rem;">Why the same dollar is worth more the earlier it starts working</p>
+    <!-- ARTICLE 1: COMPOUND INTEREST (Evergreen Anchor) -->
+    <div class="insight-art open" id="insight-art-1" style="border:1px solid #fde68a;border-radius:16px;overflow:hidden;margin-bottom:2rem;">
+      <div class="insight-art-header" onclick="toggleInsightArticle('insight-art-1')" style="background:linear-gradient(135deg,#0a0f1e 0%,#1a2744 100%);padding:1.75rem 2rem;">
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+          <div style="flex:1;min-width:0;">
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.9rem;">
+              <span style="display:inline-block;background:rgba(245,158,11,0.15);color:#f59e0b;font-size:0.7rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:20px;">Investing</span>
+              <span style="display:inline-block;background:rgba(245,158,11,0.3);color:#ffffff;font-size:0.7rem;font-weight:800;letter-spacing:0.05em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:20px;">🌱 Evergreen</span>
+            </div>
+            <h3 style="font-family:'Fredoka One',cursive;font-size:1.5rem;color:#ffffff;line-height:1.3;">Compound Interest: The Most Powerful Force in Personal Finance</h3>
+            <p style="color:#cbd5e1;font-size:0.88rem;margin-top:0.4rem;">Why the same dollar is worth more the earlier it starts working</p>
+          </div>
+          <span class="insight-chevron" style="font-size:1.3rem;color:#f59e0b;flex-shrink:0;margin-top:0.2rem;">▸</span>
+        </div>
       </div>
-      <div style="padding:2rem;">
+      <div class="insight-art-body" style="padding:2rem;">
         <p style="color:#334155;margin-bottom:1.1rem;">Albert Einstein reportedly called compound interest one of the most powerful forces in the universe. Whether or not he actually said it, the underlying point is real — and most adults understand it far less intuitively than they think they do.</p>
 
         <h4 style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:#d97706;margin:1.5rem 0 0.7rem;">Interest on interest, not just interest</h4>
@@ -637,14 +652,22 @@
       </div>
     </div>
 
-    <!-- ARTICLE 2: CREDIT CARDS -->
-    <div style="border:1px solid #fde68a;border-radius:16px;overflow:hidden;">
-      <div style="background:linear-gradient(135deg,#0a0f1e 0%,#1a2744 100%);padding:1.75rem 2rem;">
-        <div style="display:inline-block;background:rgba(245,158,11,0.15);color:#f59e0b;font-size:0.7rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:20px;margin-bottom:0.9rem;">Debt &amp; Credit</div>
-        <h3 style="font-family:'Fredoka One',cursive;font-size:1.5rem;color:#ffffff;line-height:1.3;">Why "Free Money" From a Credit Card Isn't Free</h3>
-        <p style="color:#cbd5e1;font-size:0.88rem;margin-top:0.4rem;">How minimum payments quietly turn a small purchase into an expensive one</p>
+    <!-- ARTICLE 2: CREDIT CARDS (Rotating) -->
+    <div class="insight-art" id="insight-art-2" style="border:1px solid #fde68a;border-radius:16px;overflow:hidden;">
+      <div class="insight-art-header" onclick="toggleInsightArticle('insight-art-2')" style="background:linear-gradient(135deg,#0a0f1e 0%,#1a2744 100%);padding:1.75rem 2rem;">
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+          <div style="flex:1;min-width:0;">
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.9rem;">
+              <span style="display:inline-block;background:rgba(245,158,11,0.15);color:#f59e0b;font-size:0.7rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:20px;">Debt &amp; Credit</span>
+              <span style="display:inline-block;background:rgba(245,158,11,0.3);color:#ffffff;font-size:0.7rem;font-weight:800;letter-spacing:0.05em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:20px;">🔄 Updated Aug 2026</span>
+            </div>
+            <h3 style="font-family:'Fredoka One',cursive;font-size:1.5rem;color:#ffffff;line-height:1.3;">Why "Free Money" From a Credit Card Isn't Free</h3>
+            <p style="color:#cbd5e1;font-size:0.88rem;margin-top:0.4rem;">How minimum payments quietly turn a small purchase into an expensive one</p>
+          </div>
+          <span class="insight-chevron" style="font-size:1.3rem;color:#f59e0b;flex-shrink:0;margin-top:0.2rem;">▸</span>
+        </div>
       </div>
-      <div style="padding:2rem;">
+      <div class="insight-art-body collapsed" style="padding:2rem;">
         <p style="color:#334155;margin-bottom:1.1rem;">A credit card can feel like free money in the moment — you buy something, and nothing actually leaves your account that day. But that feeling is exactly the design. The cost hasn't disappeared. It's been delayed, and delayed debt almost always costs more than debt paid immediately.</p>
 
         <h4 style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:#d97706;margin:1.5rem 0 0.7rem;">The minimum payment trap</h4>
@@ -700,8 +723,96 @@
       </div>
     </div>
 
-    <p style="text-align:center;color:#94a3b8;font-size:0.85rem;margin-top:2rem;">More free articles added regularly — check back often.</p>
+    <!-- ARTICLE 3: FED RATE DECISION (Rotating) -->
+    <div class="insight-art" id="insight-art-3" style="border:1px solid #fde68a;border-radius:16px;overflow:hidden;margin-bottom:2rem;">
+      <div class="insight-art-header" onclick="toggleInsightArticle('insight-art-3')" style="background:linear-gradient(135deg,#0a0f1e 0%,#1a2744 100%);padding:1.75rem 2rem;">
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+          <div style="flex:1;min-width:0;">
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.9rem;">
+              <span style="display:inline-block;background:rgba(245,158,11,0.15);color:#f59e0b;font-size:0.7rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:20px;">Interest Rates</span>
+              <span style="display:inline-block;background:rgba(245,158,11,0.3);color:#ffffff;font-size:0.7rem;font-weight:800;letter-spacing:0.05em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:20px;">🔄 Updated Aug 2026</span>
+            </div>
+            <h3 style="font-family:'Fredoka One',cursive;font-size:1.5rem;color:#ffffff;line-height:1.3;">The Fed Just Held Interest Rates Steady Again — Here's What That Actually Means For You</h3>
+            <p style="color:#cbd5e1;font-size:0.88rem;margin-top:0.4rem;">A plain-English breakdown of what a "rate hold" really changes for your savings, debt, and everyday money</p>
+          </div>
+          <span class="insight-chevron" style="font-size:1.3rem;color:#f59e0b;flex-shrink:0;margin-top:0.2rem;">▸</span>
+        </div>
+      </div>
+      <div class="insight-art-body collapsed" style="padding:2rem;">
+        <p style="color:#334155;margin-bottom:1.1rem;">Late last month, the U.S. Federal Reserve held its benchmark interest rate steady for the fifth consecutive meeting, keeping the target range at 3.50%–3.75%. Headlines like this show up constantly, and it's easy to skim past them without knowing what, if anything, actually changes for you. Here's the plain-English version.</p>
+
+        <h4 style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:#d97706;margin:1.5rem 0 0.7rem;">What actually happened</h4>
+        <p style="color:#334155;margin-bottom:1.1rem;">At its late-July meeting — the second under new Fed Chair Kevin Warsh — the central bank's rate-setting committee voted 9-3 to leave rates unchanged. What's unusual is the direction of the dissent: the three policymakers who disagreed wanted rates <em>higher</em>, not lower, reflecting concern that inflation — running well above the Fed's 2% target, partly due to elevated energy prices — hasn't cooled enough yet. Warsh described the decision as a rigorous review rather than a pause, and signalled the Fed is prepared to act if inflation doesn't ease.</p>
+
+        <div style="background:#fef3c7;border-left:5px solid #f59e0b;border-radius:10px;padding:1.1rem 1.4rem;margin:1.4rem 0;font-size:0.95rem;color:#0a0f1e;">
+          <strong style="color:#92400e;">Why this matters:</strong> A "hold" isn't nothing happening — it's the Fed choosing to keep borrowing and saving rates exactly where they are for at least another cycle, while it watches the data. That has real, immediate effects on money you already have sitting in a bank account or owe on a card.
+        </div>
+
+        <h4 style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:#d97706;margin:1.5rem 0 0.7rem;">What a "hold" actually changes for your money</h4>
+        <p style="color:#334155;margin-bottom:1.1rem;">A rate hold means the three things most tied to the Fed's rate tend to stay roughly where they are too: <strong style="color:#0a0f1e;">savings account and CD yields</strong> stay at their current level rather than rising or falling further, <strong style="color:#0a0f1e;">new mortgage and loan rates</strong> hold steady rather than getting cheaper, and <strong style="color:#0a0f1e;">credit card interest rates</strong> — already near multi-year highs — stay elevated rather than easing. None of these move dramatically overnight, but a hold removes the "wait, it might drop soon" reason to delay a decision.</p>
+
+        <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:1.5rem 1rem;margin:1.5rem 0;text-align:center;">
+          <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;height:auto;">
+            <rect x="240" y="15" width="160" height="50" rx="12" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+            <text x="320" y="45" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="13" fill="#92400e">Fed Holds Rate</text>
+            <line x1="320" y1="65" x2="320" y2="85" stroke="#f59e0b" stroke-width="2"/>
+            <line x1="110" y1="85" x2="530" y2="85" stroke="#f59e0b" stroke-width="2"/>
+            <line x1="110" y1="85" x2="110" y2="105" stroke="#f59e0b" stroke-width="2"/>
+            <line x1="320" y1="85" x2="320" y2="105" stroke="#f59e0b" stroke-width="2"/>
+            <line x1="530" y1="85" x2="530" y2="105" stroke="#f59e0b" stroke-width="2"/>
+            <rect x="20" y="105" width="180" height="70" rx="12" fill="#f0fdf4" stroke="#059669" stroke-width="2"/>
+            <text x="110" y="132" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="12" fill="#065f46">Savings &amp; CD yields</text>
+            <text x="110" y="150" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#065f46">stay where they are</text>
+            <rect x="230" y="105" width="180" height="70" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+            <text x="320" y="132" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="12" fill="#1e3a8a">New loans &amp; mortgages</text>
+            <text x="320" y="150" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#1e3a8a">stay where they are</text>
+            <rect x="440" y="105" width="180" height="70" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+            <text x="530" y="132" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="12" fill="#991b1b">Credit card APRs</text>
+            <text x="530" y="150" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#991b1b">stay elevated</text>
+          </svg>
+          <p style="font-size:0.85rem;color:#64748b;margin-top:1rem;font-style:italic;">A hold means "steady," not "cheaper" — and credit card debt stays expensive either way.</p>
+        </div>
+
+        <h4 style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:#d97706;margin:1.5rem 0 0.7rem;">Why hold instead of cut or hike</h4>
+        <p style="color:#334155;margin-bottom:1.1rem;">Inflation has come down from its post-pandemic peak but hasn't reached the Fed's 2% target, and recent energy-price pressure has made the picture stickier. Cutting rates too early risks reigniting inflation. Hiking risks slowing an economy that's still showing resilience. Holding is the Fed's way of buying time for more data before committing either way — which is exactly why the three dissenting votes this time pushed for a hike, not a cut.</p>
+
+        <div style="background:#fde68a;border-radius:14px;padding:1.5rem 1.75rem;margin:1.75rem 0;">
+          <h4 style="font-family:'Fredoka One',cursive;font-size:1.05rem;color:#92400e;margin-bottom:0.6rem;">💡 Try this this week</h4>
+          <p style="color:#0a0f1e;font-weight:600;">Check the interest rate on your savings account against current high-yield options, and check whether any credit card balance you're carrying is at a rate you could refinance or consolidate. A rate hold is a good prompt to check both — nothing is about to change on its own.</p>
+        </div>
+
+        <h4 style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:#d97706;margin:1.5rem 0 0.7rem;">The one idea to take away</h4>
+        <p style="color:#334155;margin-bottom:0;">A Fed "hold" isn't a non-event — it's a signal that current rates are here to stay for at least another cycle. That makes it a good moment to check whether your own savings and debt are working with that reality, rather than waiting for a change that isn't guaranteed to come soon.</p>
+      </div>
+      <div style="background:#0a0f1e;padding:1.75rem 2rem;text-align:center;">
+        <h4 style="font-family:'Fredoka One',cursive;font-size:1.1rem;color:#f59e0b;margin-bottom:0.5rem;">Is your emergency fund earning what it should?</h4>
+        <p style="color:#cbd5e1;font-size:0.9rem;max-width:480px;margin:0 auto 1rem;">The Emergency Fund Builder walks you through where to actually keep your safety net so it's both accessible and earning a fair rate — rate environment aside.</p>
+        <a href="https://volareconsultants.gumroad.com/l/financial-intelligence-series-4-the-emergency-fund-builder" target="_blank" style="background:#f59e0b;color:#0a0f1e;padding:0.65rem 1.5rem;border-radius:25px;font-weight:800;font-size:0.88rem;text-decoration:none;display:inline-block;">See the Guide →</a>
+      </div>
+    </div>
+
+    <!-- Past Articles archive: when a rotating article is replaced, move its full content here
+         instead of deleting it. For news/time-sensitive pieces, add a visible "As of [date] —
+         kept for reference" note near the top so it's never mistaken for current information.
+         Evergreen pieces can archive without that caveat. Leave this comment in place as the
+         marker for where future archived articles go. -->
+
+    <p style="text-align:center;color:#94a3b8;font-size:0.85rem;margin-top:2rem;">Rotating articles refreshed every 2–4 weeks · check back often.</p>
   </div>
+  <script>
+    function toggleInsightArticle(id) {
+      var article = document.getElementById(id);
+      var body = article.querySelector('.insight-art-body');
+      var isOpen = article.classList.contains('open');
+      if (isOpen) {
+        article.classList.remove('open');
+        body.classList.add('collapsed');
+      } else {
+        article.classList.add('open');
+        body.classList.remove('collapsed');
+      }
+    }
+  </script>
 </div>
 
 <!-- ═══════════════════════════════════════════════
