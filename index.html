@@ -499,14 +499,56 @@
   .collapsible-body { display: none; }
   .collapsible.open .collapsible-body { display: block; }
 
+
+  /* ── SEARCH + FREE LIBRARY ── */
+  .find-wrap { background:#0f172a; padding:2.25rem 2rem 2.5rem; border-top:1px solid rgba(245,158,11,0.25); }
+  .find-inner { max-width:1000px; margin:0 auto; }
+  .find-title { font-family:'Fredoka One',cursive; color:#fff; font-size:1.5rem; text-align:center; margin-bottom:0.3rem; }
+  .find-sub { color:#94a3b8; text-align:center; font-size:0.92rem; margin-bottom:1.1rem; }
+  .search-box { display:flex; align-items:center; gap:0.6rem; background:#fff; border-radius:30px; padding:0.35rem 0.5rem 0.35rem 1.2rem; max-width:620px; margin:0 auto; box-shadow:0 6px 20px rgba(0,0,0,0.25); }
+  .search-box input { flex:1; min-width:0; border:none; outline:none; font-family:'Nunito',sans-serif; font-size:1rem; padding:0.55rem 0; color:var(--navy); background:transparent; }
+  .search-box button { border:none; background:var(--gold); color:var(--navy); font-weight:800; font-family:'Nunito',sans-serif; border-radius:22px; padding:0.55rem 1.1rem; cursor:pointer; font-size:0.9rem; }
+  .search-hints { text-align:center; margin-top:0.8rem; font-size:0.82rem; color:#94a3b8; }
+  .search-hints a { color:var(--gold); text-decoration:none; font-weight:700; margin:0 0.3rem; cursor:pointer; }
+  .search-results { margin-top:1.5rem; display:none; }
+  .search-results.show { display:block; }
+  .search-count { color:#cbd5e1; font-size:0.9rem; margin-bottom:0.9rem; text-align:center; }
+  .res-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:0.9rem; }
+  .res-card { background:#fff; border-radius:12px; padding:1rem 1.1rem; display:flex; flex-direction:column; gap:0.35rem; }
+  .res-where { font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold-dark); }
+  .res-title { font-weight:800; color:var(--navy-mid); font-size:0.95rem; line-height:1.3; }
+  .res-foot { display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:0.4rem; }
+  .res-price { font-family:'Fredoka One',cursive; color:var(--navy); }
+  .res-foot a { background:var(--navy); color:#fff; text-decoration:none; font-weight:800; font-size:0.8rem; padding:0.32rem 0.85rem; border-radius:20px; }
+  .res-more { text-align:center; margin-top:1rem; }
+  .res-more button, .lib-more button { background:transparent; color:var(--gold); border:2px solid var(--gold); border-radius:22px; padding:0.45rem 1.2rem; font-weight:800; font-family:'Nunito',sans-serif; cursor:pointer; }
+  .lib-chips { display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center; margin-bottom:1.5rem; }
+  .lib-chip { border:2px solid rgba(245,158,11,0.45); background:transparent; color:#fef3c7; border-radius:22px; padding:0.4rem 1rem; font-weight:800; font-size:0.85rem; font-family:'Nunito',sans-serif; cursor:pointer; }
+  .lib-chip.on { background:var(--gold); color:var(--navy); border-color:var(--gold); }
+  .lib-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.1rem; text-align:left; }
+  .lib-card { background:rgba(255,255,255,0.05); border:1px solid rgba(245,158,11,0.3); border-radius:14px; padding:1.3rem; display:flex; flex-direction:column; gap:0.5rem; }
+  .lib-card.women { border-color:rgba(224,163,177,0.5); }
+  .lib-tag { font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold); }
+  .lib-card.women .lib-tag { color:var(--rose-light); }
+  .lib-name { font-weight:800; color:#fff; font-size:1rem; line-height:1.3; }
+  .lib-desc { font-size:0.85rem; color:#94a3b8; }
+  .lib-card a { margin-top:auto; background:var(--gold); color:var(--navy); padding:0.55rem 1rem; border-radius:22px; font-weight:800; font-size:0.86rem; text-decoration:none; text-align:center; }
+  .lib-card.women a { background:var(--rose); color:#fff; }
+  .lib-card.hide, .lib-card.extra { display:none; }
+  .lib-more { text-align:center; margin-top:1.25rem; }
+
+  [id] { scroll-margin-top: 110px; }
   /* ── RESPONSIVE ── */
   @media (max-width: 600px) {
-    nav { padding: 0.75rem 1rem; }
+    nav { padding: 0.75rem 1rem; position: static; }
+    [id] { scroll-margin-top: 0; }
     .hero { padding: 2.5rem 1.25rem 2.5rem; }
     .prod-section, .section { padding: 2rem 1.25rem; }
     .ultimate-card { flex-direction: column; align-items: flex-start; }
     .bundle-card { flex-direction: column; align-items: flex-start; }
     .hero-stats { gap: 1.5rem; }
+    .find-wrap { padding:1.75rem 1rem 2rem; }
+    .search-box button { padding:0.5rem 0.8rem; }
   }
 </style>
 </head>
@@ -521,7 +563,7 @@
 <nav>
   <a class="nav-brand" href="#">Volare <span>Consultants</span></a>
   <div class="nav-links">
-    <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Resource</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#learn" style="color:var(--teal);font-weight:800;">Insight Center</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#financial">Financial Intelligence</a>
+    <a href="#search" style="color:var(--navy);font-weight:800;">🔍 Search</a> <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Library</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#learn" style="color:var(--teal);font-weight:800;">Insight Center</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#financial">Financial Intelligence</a>
     <a href="#girlbossfree" style="color:var(--rose-dark);font-weight:800;">Girl Boss Essentials</a>
     <a href="#foundergrowth" style="color:var(--rose-dark);font-weight:800;">Founder Growth Series</a>
     <a href="#gracefulgrowth" style="color:var(--plum);font-weight:800;">Graceful Growth Series</a>
@@ -548,7 +590,7 @@
 
   <div class="hero-btns">
     <a class="btn-primary" href="https://volareconsultants.gumroad.com" target="_blank">Browse All Products →</a>
-    <a class="btn-secondary" href="#financial">Explore the Library</a>
+    <a class="btn-secondary" href="#free">Browse Free Library</a>
   </div>
 
   <div class="hero-stats">
@@ -558,6 +600,25 @@
     <div class="stat"><div class="stat-num">USD</div><div class="stat-label">Fixed Pricing</div></div>
   </div>
 </section>
+
+<!-- SEARCH: finds any product on this page -->
+<div class="find-wrap" id="search">
+  <div class="find-inner">
+    <h2 class="find-title">Looking for something specific?</h2>
+    <p class="find-sub">Type a word and we'll show every guide, workbook, bundle and free tool that matches.</p>
+    <div class="search-box">
+      <span aria-hidden="true">🔍</span>
+      <input id="siteSearch" type="search" placeholder="Try: debt, retirement, pricing, women…" aria-label="Search products">
+      <button type="button" id="searchClear">Clear</button>
+    </div>
+    <div class="search-hints">Popular: <a data-q="debt">debt</a><a data-q="retirement">retirement</a><a data-q="freelance">freelance</a><a data-q="free">free</a><a data-q="bundle">bundles</a></div>
+    <div class="search-results" id="searchResults">
+      <div class="search-count" id="searchCount"></div>
+      <div class="res-grid" id="resGrid"></div>
+      <div class="res-more" id="resMore"><button type="button">Show more results</button></div>
+    </div>
+  </div>
+</div>
 
 <!-- ═══════════════════════════════════════════════
      LEARNING CENTER (full articles, in-page)
@@ -931,48 +992,20 @@
   </div>
 </div>
 
-<!-- FREE RESOURCES SECTION -->
+<!-- FREE LIBRARY: every free item in one place (data list lives in the script below) -->
 <div id="free" style="background:linear-gradient(135deg,#0a0f1e 0%,#1a2744 100%);padding:3rem 2rem;text-align:center;">
 <div style="max-width:1000px;margin:0 auto;">
-<div style="display:inline-block;background:rgba(245,158,11,0.15);color:#f59e0b;font-size:0.75rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:20px;border:1px solid rgba(245,158,11,0.3);margin-bottom:1.25rem;">Free Resources — No Payment Required</div>
-<h2 style="font-family:'Fredoka One',cursive;font-size:clamp(1.6rem,4vw,2.4rem);color:#ffffff;margin-bottom:0.75rem;line-height:1.2;">Not sure where to start?<br><span style="color:#f59e0b;">Try one of these free tools first.</span></h2>
-<p style="color:#cbd5e1;font-size:0.97rem;max-width:600px;margin:0 auto 2rem;">Four free downloads — no payment, no signup friction. Start with whichever fits what's on your mind right now.</p>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;text-align:left;">
-
-  <!-- Financial Health Self-Assessment (existing) -->
-  <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(245,158,11,0.3);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;gap:0.6rem;">
-    <div style="font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:#f59e0b;">10 Questions · 5 Areas · ~20 Minutes</div>
-    <div style="font-weight:800;color:#ffffff;font-size:1.02rem;line-height:1.3;">Your Financial Health Self-Assessment</div>
-    <div style="font-size:0.85rem;color:#94a3b8;">Income · Debt · Savings · Protection · Mindset</div>
-    <a href="https://volareconsultants.gumroad.com/l/your-financial-health-self-assessment" target="_blank" style="margin-top:auto;background:#f59e0b;color:#0a0f1e;padding:0.6rem 1.2rem;border-radius:22px;font-weight:800;font-size:0.88rem;text-decoration:none;text-align:center;">Download Free →</a>
-  </div>
-
-  <!-- Weekly Budget Tracker (new) -->
-  <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(245,158,11,0.3);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;gap:0.6rem;">
-    <div style="font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:#f59e0b;">Printable · 7-Day Tracker</div>
-    <div style="font-weight:800;color:#ffffff;font-size:1.02rem;line-height:1.3;">Weekly Budget Tracker</div>
-    <div style="font-size:0.85rem;color:#94a3b8;">Track income, expenses, and savings day by day. A4 + US Letter included.</div>
-    <a href="https://volareconsultants.gumroad.com/l/weekly-budget-tracker-free" target="_blank" style="margin-top:auto;background:#f59e0b;color:#0a0f1e;padding:0.6rem 1.2rem;border-radius:22px;font-weight:800;font-size:0.88rem;text-decoration:none;text-align:center;">Download Free →</a>
-  </div>
-
-  <!-- Monthly Financial Goals Planner (new) -->
-  <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(245,158,11,0.3);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;gap:0.6rem;">
-    <div style="font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:#f59e0b;">Printable · Monthly Planner</div>
-    <div style="font-weight:800;color:#ffffff;font-size:1.02rem;line-height:1.3;">Monthly Financial Goals Planner</div>
-    <div style="font-size:0.85rem;color:#94a3b8;">Set top goals, budget by category, and check in weekly. A4 + US Letter included.</div>
-    <a href="https://volareconsultants.gumroad.com/l/monthly-financial-goals-planner-free" target="_blank" style="margin-top:auto;background:#f59e0b;color:#0a0f1e;padding:0.6rem 1.2rem;border-radius:22px;font-weight:800;font-size:0.88rem;text-decoration:none;text-align:center;">Download Free →</a>
-  </div>
-
-  <!-- Debt Payoff Checklist (new) -->
-  <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(245,158,11,0.3);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;gap:0.6rem;">
-    <div style="font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:#f59e0b;">Printable · Payoff Tracker</div>
-    <div style="font-weight:800;color:#ffffff;font-size:1.02rem;line-height:1.3;">Debt Payoff Checklist</div>
-    <div style="font-size:0.85rem;color:#94a3b8;">Snowball or avalanche method, plus a progress tracker. A4 + US Letter included.</div>
-    <a href="https://volareconsultants.gumroad.com/l/debt-payoff-checklist-free" target="_blank" style="margin-top:auto;background:#f59e0b;color:#0a0f1e;padding:0.6rem 1.2rem;border-radius:22px;font-weight:800;font-size:0.88rem;text-decoration:none;text-align:center;">Download Free →</a>
-  </div>
-
+<div style="display:inline-block;background:rgba(245,158,11,0.15);color:#f59e0b;font-size:0.75rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:20px;border:1px solid rgba(245,158,11,0.3);margin-bottom:1.25rem;">The Free Library — No Payment Required</div>
+<h2 style="font-family:'Fredoka One',cursive;font-size:clamp(1.6rem,4vw,2.4rem);color:#ffffff;margin-bottom:0.75rem;line-height:1.2;">Not sure where to start?<br><span style="color:#f59e0b;">Every free guide and tool, in one place.</span></h2>
+<p style="color:#cbd5e1;font-size:0.97rem;max-width:600px;margin:0 auto 1.5rem;"><span id="libTotal"></span> free downloads. Pick a topic below, or browse them all.</p>
+<div class="lib-chips" id="libChips">
+  <button type="button" class="lib-chip on" data-f="all">All</button>
+  <button type="button" class="lib-chip" data-f="money">💰 Money Basics</button>
+  <button type="button" class="lib-chip" data-f="women">🌸 Women Founders</button>
+  <button type="button" class="lib-chip" data-f="tools">🧰 Templates &amp; Tools</button>
 </div>
+<div class="lib-grid" id="libGrid"></div>
+<div class="lib-more" id="libMore"><button type="button">Show all free items</button></div>
 <p style="color:#64748b;font-size:0.8rem;margin-top:1.5rem;">You will be taken to Gumroad. Price is already set to 0. Download instantly.</p>
 </div>
 </div>
@@ -1726,7 +1759,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-nav">
-    <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Resource</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#financial">Financial Intelligence</a>
+    <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Library</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#financial">Financial Intelligence</a>
     <a href="#girlbossfree" style="color:var(--rose-dark);font-weight:800;">Girl Boss Essentials</a>
     <a href="#foundergrowth" style="color:var(--rose-dark);font-weight:800;">Founder Growth Series</a>
     <a href="#gracefulgrowth" style="color:var(--plum);font-weight:800;">Graceful Growth Series</a>
@@ -1749,6 +1782,87 @@
       if (wrap) { wrap.classList.toggle('open'); }
     });
   });
+</script>
+
+<script>
+/* ===== FREE LIBRARY =====
+   To add a new free item: copy one line below, change c (money / women / tools), t (title), d (short description), u (Gumroad link). */
+var FREE_LIBRARY = [{"c": "money", "t": "Your Financial Health Self-Assessment", "d": "10 questions across income, debt, savings, protection and mindset. About 20 minutes.", "u": "https://volareconsultants.gumroad.com/l/your-financial-health-self-assessment"}, {"c": "money", "t": "Weekly Budget Tracker", "d": "Track income, expenses and savings day by day. A4 + US Letter.", "u": "https://volareconsultants.gumroad.com/l/weekly-budget-tracker-free"}, {"c": "money", "t": "Monthly Financial Goals Planner", "d": "Set top goals, budget by category, check in weekly. A4 + US Letter.", "u": "https://volareconsultants.gumroad.com/l/monthly-financial-goals-planner-free"}, {"c": "money", "t": "Debt Payoff Checklist", "d": "Snowball or avalanche method, plus a progress tracker. A4 + US Letter.", "u": "https://volareconsultants.gumroad.com/l/debt-payoff-checklist-free"}, {"c": "money", "t": "The Income Reality Check — Free Preview", "d": "A 3-page taste of Guide 1 of the Financial Intelligence Series.", "u": "https://volareconsultants.gumroad.com/l/income-reality-check-preview"}, {"c": "women", "t": "Find Your Niche", "d": "Girl Boss Essentials, Book 1 of 3. Choose a focused business idea with confidence.", "u": "https://volareconsultants.gumroad.com/l/girl-boss-essentials-find-your-niche-free"}, {"c": "women", "t": "Build Your Brand", "d": "Girl Boss Essentials, Book 2 of 3. A simple brand identity guide.", "u": "https://volareconsultants.gumroad.com/l/girl-boss-essentials-build-your-brand-free"}, {"c": "women", "t": "Grow with Social Media + Goals", "d": "Girl Boss Essentials, Book 3 of 3. Pick a platform and set goals that get hit.", "u": "https://volareconsultants.gumroad.com/l/girl-boss-essentials-grow-with-social-media-goals-free"}, {"c": "women", "t": "Learn, Grow, Lead", "d": "Women Founder Growth Series, Book 1 of 5. Confidence and a leadership mindset.", "u": "https://volareconsultants.gumroad.com/l/women-founder-growth-series-learn-grow-lead-free"}, {"c": "women", "t": "Spot Ideas, Find Opportunities", "d": "Women Founder Growth Series, Book 2 of 5. Turn everyday problems into business ideas.", "u": "https://volareconsultants.gumroad.com/l/women-founder-growth-series-spot-ideas-find-opportunities-free"}, {"c": "women", "t": "Create with Confidence", "d": "Women Founder Growth Series, Book 3 of 5. Content that connects.", "u": "https://volareconsultants.gumroad.com/l/women-founder-growth-series-create-with-confidence-free"}, {"c": "women", "t": "Build Visibility with Confidence", "d": "Women Founder Growth Series, Book 4 of 5. Get noticed by the right people.", "u": "https://volareconsultants.gumroad.com/l/women-founder-growth-series-build-visibility-with-confidence-free"}, {"c": "women", "t": "Sell with Confidence", "d": "Women Founder Growth Series, Book 5 of 5. Clear offers, trust and ethical sales.", "u": "https://volareconsultants.gumroad.com/l/women-founder-growth-series-sell-with-confidence-free"}, {"c": "tools", "t": "Know Your Worth — Pricing Calculator", "d": "Interactive spreadsheet: hourly rate, project quotes and retainer pricing.", "u": "https://volareconsultants.gumroad.com/l/know-your-worth-pricing-calculator-free"}, {"c": "tools", "t": "Client Proposal & Agreement Kit", "d": "Editable Word templates: a proposal to win the work and an agreement to protect it.", "u": "https://volareconsultants.gumroad.com/l/client-proposal-agreement-kit-free"}, {"c": "tools", "t": "Freelancer Cash Flow Tracker", "d": "Interactive spreadsheet: monthly income, expenses, and tax set-aside.", "u": "https://volareconsultants.gumroad.com/l/freelancer-cash-flow-tracker-free"}];
+(function(){
+  var TAG={money:'Money Basics · Free',women:'Women Founders · Free',tools:'Templates & Tools · Free'};
+  var grid=document.getElementById('libGrid'), more=document.getElementById('libMore');
+  var SHOW=6, expanded=false, filter='all';
+  document.getElementById('libTotal').textContent=FREE_LIBRARY.length;
+  FREE_LIBRARY.forEach(function(p){
+    var d=document.createElement('div'); d.className='lib-card '+p.c; d.setAttribute('data-c',p.c);
+    d.innerHTML='<div class="lib-tag"></div><div class="lib-name"></div><div class="lib-desc"></div><a target="_blank" rel="noopener">Download Free →</a>';
+    d.querySelector('.lib-tag').textContent=TAG[p.c]; d.querySelector('.lib-name').textContent=p.t;
+    d.querySelector('.lib-desc').textContent=p.d; d.querySelector('a').href=p.u; grid.appendChild(d);
+  });
+  function draw(){
+    var n=0;
+    grid.querySelectorAll('.lib-card').forEach(function(c){
+      var match=(filter==='all'||c.getAttribute('data-c')===filter);
+      c.classList.toggle('hide',!match);
+      if(match){ n++; c.classList.toggle('extra', filter==='all' && !expanded && n>SHOW); } else c.classList.remove('extra');
+    });
+    more.style.display=(filter==='all' && !expanded && n>SHOW)?'block':'none';
+  }
+  more.querySelector('button').addEventListener('click',function(){expanded=true;draw();});
+  document.querySelectorAll('.lib-chip').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.lib-chip').forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on'); filter=b.getAttribute('data-f'); draw();
+    });
+  });
+  draw();
+})();
+
+/* ===== SEARCH ===== reads every product link already on the page, so new products are found automatically */
+(function(){
+  var input=document.getElementById('siteSearch'), box=document.getElementById('searchResults'),
+      grid=document.getElementById('resGrid'), count=document.getElementById('searchCount'), more=document.getElementById('resMore');
+  var LIMIT=12, shown=LIMIT, items=[], seen={};
+  FREE_LIBRARY.forEach(function(p){ if(!seen[p.u]){ seen[p.u]=1; items.push({t:p.t,p:'FREE',w:'Free Library',u:p.u,k:(p.t+' '+p.d+' free').toLowerCase()}); } });
+  document.querySelectorAll('a[href*="volareconsultants.gumroad.com/l/"]').forEach(function(a){
+    var u=a.href; if(seen[u]) return;
+    var card=a.closest('.product-card,.bundle-card,.ultimate-card,.new-release-card') || a.parentElement.parentElement;
+    if(!card) return;
+    var tEl=card.querySelector('.product-title,h3,[style*="font-size:1.3rem"]');
+    var t=tEl?tEl.textContent.trim():''; if(!t) return;
+    var pEl=card.querySelector('.product-price,.bundle-price,.ultimate-price,[style*="font-size:1.8rem"]');
+    var sec=a.closest('[id]'), h2=sec?sec.querySelector('h2'):null;
+    var w=h2?h2.textContent.replace(/\s+/g,' ').trim():'';
+    var NAMES={flagship:'Flagship Guide Series',learn:'Insight Center',free:'Free Library'};
+    if(sec && NAMES[sec.id]) w=NAMES[sec.id];
+    if(w.indexOf('?')>-1||w.length>45) w='Volare Consultants';
+    seen[u]=1;
+    items.push({t:t.replace(/^★\s*|^⭐\s*/,''),p:pEl?pEl.textContent.trim():'',w:w,u:u,k:(t+' '+w+' '+card.textContent).toLowerCase()});
+  });
+  function run(){
+    var q=input.value.trim().toLowerCase();
+    if(q.length<2){ box.classList.remove('show'); return; }
+    var words=q.split(/\s+/);
+    var hits=items.filter(function(it){ return words.every(function(w){ return it.k.indexOf(w)>-1; }); });
+    hits.sort(function(a,b){ return (b.t.toLowerCase().indexOf(q)>-1)-(a.t.toLowerCase().indexOf(q)>-1); });
+    grid.innerHTML='';
+    hits.slice(0,shown).forEach(function(it){
+      var d=document.createElement('div'); d.className='res-card';
+      d.innerHTML='<div class="res-where"></div><div class="res-title"></div><div class="res-foot"><span class="res-price"></span><a target="_blank" rel="noopener">View →</a></div>';
+      d.querySelector('.res-where').textContent=it.w; d.querySelector('.res-title').textContent=it.t;
+      d.querySelector('.res-price').textContent=it.p; d.querySelector('a').href=it.u; grid.appendChild(d);
+    });
+    count.textContent = hits.length ? hits.length+' result'+(hits.length>1?'s':'')+' for "'+input.value.trim()+'"' : 'No results for "'+input.value.trim()+'". Try another word, or browse the library below.';
+    more.style.display = hits.length>shown ? 'block':'none';
+    box.classList.add('show');
+  }
+  input.addEventListener('input',function(){ shown=LIMIT; run(); });
+  more.querySelector('button').addEventListener('click',function(){ shown+=LIMIT; run(); });
+  document.getElementById('searchClear').addEventListener('click',function(){ input.value=''; run(); input.focus(); });
+  document.querySelectorAll('.search-hints a').forEach(function(a){
+    a.addEventListener('click',function(){ input.value=a.getAttribute('data-q'); shown=LIMIT; run(); });
+  });
+})();
 </script>
 </body>
 </html>
