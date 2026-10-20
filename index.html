@@ -1826,6 +1826,7 @@ var FREE_LIBRARY = [{"c": "money", "t": "Your Financial Health Self-Assessment",
   FREE_LIBRARY.forEach(function(p){ if(!seen[p.u]){ seen[p.u]=1; items.push({t:p.t,p:'FREE',w:'Free Library',u:p.u,k:(p.t+' '+p.d+' free').toLowerCase()}); } });
   document.querySelectorAll('a[href*="volareconsultants.gumroad.com/l/"]').forEach(function(a){
     var u=a.href; if(seen[u]) return;
+    if(a.closest('#learn')) return; /* skip article buttons; the real product card is listed instead */
     var card=a.closest('.product-card,.bundle-card,.ultimate-card,.new-release-card') || a.parentElement.parentElement;
     if(!card) return;
     var tEl=card.querySelector('.product-title,h3,[style*="font-size:1.3rem"]');
