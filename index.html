@@ -566,7 +566,7 @@
 <nav>
   <a class="nav-brand" href="#">Volare <span>Consultants</span></a>
   <div class="nav-links">
-    <a href="#search" style="color:var(--navy);font-weight:800;">🔍 Search</a> <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Library</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#learn" style="color:var(--teal);font-weight:800;">Insight Center</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#nextchapter" style="color:var(--sage-dark);font-weight:800;">Next Chapter Library</a> <a href="#singaporeans" style="color:var(--navy);font-weight:800;">For Singaporeans</a> <a href="#financial">Financial Intelligence</a>
+    <a href="#search" style="color:var(--navy);font-weight:800;">🔍 Search</a> <a href="#planner" style="color:var(--gold-dark);font-weight:800;">🧭 Plan Your Idea</a> <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Library</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#learn" style="color:var(--teal);font-weight:800;">Insight Center</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#nextchapter" style="color:var(--sage-dark);font-weight:800;">Next Chapter Library</a> <a href="#singaporeans" style="color:var(--navy);font-weight:800;">For Singaporeans</a> <a href="#financial">Financial Intelligence</a>
     <a href="#women" style="color:#6E2F45;font-weight:800;">For Women</a>
     <a href="#business">Business &amp; Marketing</a>
     <a href="#gigfreelance">Gig &amp; Freelance</a>
@@ -591,6 +591,7 @@
   <div class="hero-btns">
     <a class="btn-primary" href="https://volareconsultants.gumroad.com" target="_blank">Browse All Products →</a>
     <a class="btn-secondary" href="#free">Browse Free Library</a>
+    <a class="btn-secondary" href="#planner">🧭 Plan Your Idea · Free</a>
   </div>
 
   <div class="hero-stats">
@@ -618,6 +619,309 @@
       <div class="res-more" id="resMore"><button type="button">Show more results</button></div>
     </div>
   </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PLAN YOUR IDEA · FREE PLANNER (all adults, any business or side-income idea)
+     Everything runs in the visitor's browser. Nothing is sent anywhere.
+════════════════════════════════════════════════ -->
+<div id="planner" style="background:#f8fafc;padding:3.5rem 2rem;border-top:4px solid #f59e0b;border-bottom:1px solid #e2e8f0;">
+<style>
+  #planner .pl-wrap { max-width:1100px; margin:0 auto; }
+  #planner .pl-eyebrow { display:inline-block; background:#fef3c7; color:#92400e; font-size:0.8rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:0.35rem 1rem; border-radius:20px; margin-bottom:0.9rem; }
+  #planner h2.pl-title { font-family:'Fredoka One',cursive; font-size:clamp(1.8rem,4vw,2.6rem); color:#0a0f1e; line-height:1.2; margin-bottom:0.6rem; }
+  #planner h2.pl-title em { color:#d97706; font-style:normal; }
+  #planner .pl-sub { color:#334155; font-size:1.05rem; max-width:680px; margin-bottom:2rem; }
+  #planner .pl-grid { display:grid; grid-template-columns:260px 1fr; gap:1.5rem; align-items:start; }
+  #planner .pl-grid > * { min-width:0; }
+  #planner .pl-side { background:#0a0f1e; color:#fff; border-radius:16px; padding:1.5rem; position:sticky; top:110px; }
+  #planner .pl-side h3 { font-size:0.8rem; letter-spacing:0.12em; text-transform:uppercase; color:#f59e0b; margin-bottom:1rem; font-weight:800; }
+  #planner .pl-steps { list-style:none; margin:0; padding:0; }
+  #planner .pl-steps li { margin-bottom:0.35rem; }
+  #planner .pl-steps button { display:flex; align-items:center; gap:0.7rem; width:100%; background:none; border:none; color:#cbd5e1; font-family:'Nunito',sans-serif; font-size:1rem; font-weight:700; padding:0.45rem 0.4rem; border-radius:10px; cursor:pointer; text-align:left; }
+  #planner .pl-steps button:hover { background:rgba(255,255,255,0.08); }
+  #planner .pl-steps .pl-n { flex:none; width:30px; height:30px; border-radius:50%; border:2px solid #475569; display:flex; align-items:center; justify-content:center; font-size:0.9rem; font-weight:800; }
+  #planner .pl-steps button.on { color:#fff; }
+  #planner .pl-steps button.on .pl-n { background:#f59e0b; border-color:#f59e0b; color:#0a0f1e; }
+  #planner .pl-steps button.done .pl-n { background:#0d9488; border-color:#0d9488; color:#fff; }
+  #planner .pl-prog { margin-top:1.25rem; border-top:1px solid #334155; padding-top:1rem; }
+  #planner .pl-prog-row { display:flex; justify-content:space-between; font-weight:800; font-size:0.95rem; }
+  #planner .pl-bar { height:10px; background:#334155; border-radius:10px; margin:0.5rem 0 0.8rem; overflow:hidden; }
+  #planner .pl-bar span { display:block; height:100%; width:0; background:#f59e0b; border-radius:10px; transition:width 0.3s; }
+  #planner .pl-side p { font-size:0.92rem; color:#cbd5e1; line-height:1.55; }
+  #planner .pl-card { background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:2rem 2.25rem; box-shadow:0 4px 18px rgba(10,15,30,0.05); }
+  #planner .pl-top { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.6rem; }
+  #planner .pl-stepno { font-size:0.85rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:#64748b; }
+  #planner .pl-saved { font-size:0.85rem; font-weight:800; color:#0f766e; background:#ccfbf1; padding:0.3rem 0.8rem; border-radius:20px; }
+  #planner h3.pl-q { font-family:'Fredoka One',cursive; font-size:1.7rem; color:#0a0f1e; line-height:1.25; margin-bottom:0.4rem; }
+  #planner .pl-intro { color:#334155; font-size:1.02rem; margin-bottom:1.5rem; }
+  #planner label.pl-l { display:block; font-weight:800; color:#0a0f1e; font-size:1.02rem; margin:1.25rem 0 0.2rem; }
+  #planner .pl-h { display:block; color:#475569; font-size:0.95rem; margin-bottom:0.45rem; }
+  #planner input[type=text], #planner input[type=number], #planner input[type=date], #planner textarea, #planner select { width:100%; font-family:'Nunito',sans-serif; font-size:1.05rem; color:#0a0f1e; background:#fff; border:2px solid #cbd5e1; border-radius:10px; padding:0.75rem 0.9rem; }
+  #planner textarea { min-height:96px; resize:vertical; line-height:1.5; }
+  #planner input:focus, #planner textarea:focus, #planner select:focus, #planner button:focus-visible { outline:3px solid #f59e0b; outline-offset:2px; border-color:#d97706; }
+  #planner .pl-types { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0.9rem; margin-top:0.5rem; }
+  #planner .pl-type { border:2px solid #cbd5e1; border-radius:14px; padding:1.1rem 1.2rem; cursor:pointer; background:#fff; text-align:left; font-family:'Nunito',sans-serif; }
+  #planner .pl-type:hover { border-color:#f59e0b; }
+  #planner .pl-type.on { border-color:#d97706; background:#fffbeb; box-shadow:0 0 0 2px #f59e0b inset; }
+  #planner .pl-type b { display:block; font-size:1.08rem; color:#0a0f1e; margin-bottom:0.2rem; }
+  #planner .pl-type span { font-size:0.95rem; color:#475569; }
+  #planner .pl-type .pl-ic { font-size:1.6rem; display:block; margin-bottom:0.3rem; }
+  #planner .pl-checks { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:0.5rem; }
+  #planner .pl-checks label { display:flex; gap:0.6rem; align-items:center; font-size:1rem; color:#0a0f1e; background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:0.6rem 0.8rem; cursor:pointer; }
+  #planner .pl-checks input { width:20px; height:20px; accent-color:#d97706; flex:none; }
+  #planner .pl-row2 { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+  #planner .pl-row3 { display:grid; grid-template-columns:2fr 1fr; gap:0.8rem; align-items:end; margin-bottom:0.6rem; }
+  #planner .pl-tip { background:#fef3c7; border-left:5px solid #f59e0b; border-radius:10px; padding:1rem 1.25rem; margin-top:1.5rem; color:#0a0f1e; font-size:0.98rem; }
+  #planner .pl-tip b { color:#92400e; }
+  #planner .pl-nav { display:flex; justify-content:space-between; gap:0.75rem; flex-wrap:wrap; border-top:1px solid #e2e8f0; margin-top:2rem; padding-top:1.5rem; }
+  #planner .pl-btn { font-family:'Nunito',sans-serif; font-weight:800; font-size:1rem; border-radius:30px; padding:0.8rem 1.6rem; cursor:pointer; border:2px solid #0a0f1e; background:#fff; color:#0a0f1e; }
+  #planner .pl-btn.pri { background:#f59e0b; border-color:#f59e0b; color:#0a0f1e; }
+  #planner .pl-btn.pri:hover { background:#d97706; border-color:#d97706; color:#fff; }
+  #planner .pl-btn.dark { background:#0a0f1e; color:#fff; }
+  #planner .pl-btn:disabled { opacity:0.4; cursor:default; }
+  #planner .pl-sum h4 { font-family:'Fredoka One',cursive; color:#d97706; font-size:1.2rem; margin:1.4rem 0 0.5rem; }
+  #planner .pl-sum dl { display:grid; grid-template-columns:220px 1fr; gap:0.45rem 1rem; font-size:1rem; }
+  #planner .pl-sum dt { font-weight:800; color:#0a0f1e; }
+  #planner .pl-sum dd { color:#334155; margin:0; white-space:pre-wrap; }
+  #planner .pl-sum .pl-empty { color:#94a3b8; font-style:italic; }
+  #planner .pl-score { display:flex; gap:1rem; align-items:center; background:#0a0f1e; color:#fff; border-radius:14px; padding:1.1rem 1.4rem; margin:0.5rem 0 1rem; }
+  #planner .pl-score big { font-family:'Fredoka One',cursive; font-size:2.2rem; color:#f59e0b; line-height:1; }
+  #planner .pl-recs { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:0.9rem; margin-top:0.6rem; }
+  #planner .pl-rec { border:2px solid #e2e8f0; border-radius:12px; padding:1rem 1.1rem; display:flex; flex-direction:column; gap:0.35rem; }
+  #planner .pl-rec small { font-size:0.75rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#d97706; }
+  #planner .pl-rec b { color:#0a0f1e; font-size:1rem; line-height:1.3; }
+  #planner .pl-rec span { color:#475569; font-size:0.92rem; }
+  #planner .pl-rec a { margin-top:auto; align-self:flex-start; background:#0a0f1e; color:#fff; text-decoration:none; font-weight:800; font-size:0.9rem; padding:0.45rem 1rem; border-radius:20px; }
+  #planner .pl-actions { display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:1.25rem; }
+  #planner .pl-note { font-size:0.9rem; color:#475569; margin-top:1rem; }
+  #planner .pl-err { color:#b91c1c; font-weight:800; font-size:0.95rem; margin-top:0.6rem; display:none; }
+  @media (max-width:820px) {
+    #planner { padding:2rem 1rem; }
+    #planner .pl-grid { grid-template-columns:1fr; }
+    #planner .pl-side { position:static; padding:1rem 1.1rem; }
+    #planner .pl-steps { display:flex; gap:0.3rem; overflow-x:auto; padding-bottom:0.3rem; }
+    #planner .pl-steps li { margin:0; flex:none; }
+    #planner .pl-steps button { padding:0.3rem; }
+    #planner .pl-steps .pl-lbl { display:none; }
+    #planner .pl-steps button.on .pl-lbl { display:inline; }
+    #planner .pl-side p.pl-hint { display:none; }
+    #planner .pl-card { padding:1.4rem 1.1rem; }
+    #planner .pl-row2, #planner .pl-row3 { grid-template-columns:1fr; }
+    #planner .pl-sum dl { grid-template-columns:1fr; }
+    #planner .pl-sum dt { margin-top:0.5rem; }
+    #planner .pl-btn { flex:1; text-align:center; }
+  }
+</style>
+<div class="pl-wrap">
+  <div class="pl-eyebrow">Free Tool · Plan Your Idea</div>
+  <h2 class="pl-title">Take your idea from <em>maybe</em> to a plan.</h2>
+  <p class="pl-sub">A calm, step-by-step planner for any business or side-income idea: a digital product, a service, freelance work or selling something you make. About 20 minutes. Free, private and saved on your device.</p>
+
+  <div class="pl-grid">
+    <aside class="pl-side" aria-label="Your planning path">
+      <h3>Your planning path</h3>
+      <ol class="pl-steps" id="plSteps"></ol>
+      <div class="pl-prog">
+        <div class="pl-prog-row"><span>Plan progress</span><span id="plPct">0%</span></div>
+        <div class="pl-bar" aria-hidden="true"><span id="plBar"></span></div>
+        <p class="pl-hint">A clear first version beats a perfect idea. Keep your answers short and specific.</p>
+      </div>
+    </aside>
+
+    <div class="pl-card" id="plCard" aria-live="polite"></div>
+  </div>
+  <p class="pl-note" style="text-align:center;margin-top:1.25rem;">Your answers stay on this device only. Nothing is sent to us or anyone else. General guidance only, not legal, tax or financial advice.</p>
+</div>
+
+<script>
+(function(){
+  var KEY='volarePlanner_v1', G='https://volareconsultants.gumroad.com/l/';
+  var TYPES={
+    digital:{ic:'💻',t:'A digital product',d:'An e-book, template, course, printable or tool.',noun:'product',ex:'The Confident Pricing Kit',
+      where:['Gumroad or a similar store','My own website','Etsy or a marketplace','Social media','Email list','Word of mouth']},
+    service:{ic:'🤝',t:'A service or freelance work',d:'Coaching, design, writing, consulting, tutoring, admin.',noun:'service',ex:'Weekend Bookkeeping for Cafés',
+      where:['Referrals from people I know','LinkedIn','Freelance platforms','My own website','Local networking','Social media']},
+    physical:{ic:'📦',t:'Selling something you make',d:'Crafts, food, clothing or other physical goods.',noun:'product',ex:'Small-Batch Kaya Jars',
+      where:['Online marketplace (e.g. Shopee, Etsy)','Markets and pop-ups','Social media','My own website','Local shops','Friends and family']},
+    unsure:{ic:'🌱',t:"I'm not sure yet",d:'You have a rough idea or a skill and want to explore it.',noun:'idea',ex:'Something to do with my baking',
+      where:['Talking to people I know','Social media','Online communities','Local groups','Not sure yet','A small test or trial']}
+  };
+  var STEPS=[
+    {k:'type',lbl:'Your starting point'},{k:'idea',lbl:'The idea'},{k:'audience',lbl:'Your audience'},
+    {k:'offer',lbl:'The offer'},{k:'launch',lbl:'The launch'},{k:'action',lbl:'Action plan'},{k:'summary',lbl:'Your summary'}
+  ];
+  var FIELDS=['type','name','sentence','outcome','who','problem','whereThey','included','currency','price','priceWhy','where','first10','launchDate','step1','date1','step2','date2','step3','date3','hours','worry','worryFix','sg'];
+  var data={}, step=0, store=null;
+  try{ store=window.localStorage; store.setItem('__pl','1'); store.removeItem('__pl'); }catch(e){ store=null; }
+  function load(){ if(!store) return; try{ var s=JSON.parse(store.getItem(KEY)||'{}'); data=s.data||{}; step=s.step||0; }catch(e){ data={}; step=0; } }
+  function save(){ if(!store) return false; try{ store.setItem(KEY,JSON.stringify({data:data,step:step,at:Date.now()})); return true; }catch(e){ return false; } }
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+  function T(){ return TYPES[data.type]||TYPES.unsure; }
+  function filled(){ var n=0,c=['type','name','sentence','outcome','who','problem','included','price','where','first10','step1','date1']; c.forEach(function(f){ var v=data[f]; if(v&&(!Array.isArray(v)||v.length)) n++; }); return Math.round(n/c.length*100); }
+
+  var card=document.getElementById('plCard'), list=document.getElementById('plSteps');
+  function nav(){
+    list.innerHTML='';
+    STEPS.forEach(function(s,i){
+      var li=document.createElement('li'), b=document.createElement('button'); b.type='button';
+      b.className=(i===step?'on':'')+(i<step?' done':'');
+      b.innerHTML='<span class="pl-n">'+(i<step?'✓':(i+1))+'</span><span class="pl-lbl">'+s.lbl+'</span>';
+      b.setAttribute('aria-current', i===step?'step':'false');
+      b.onclick=function(){ collect(); if(i>0&&!data.type){ go(0,true); return; } go(i); };
+      li.appendChild(b); list.appendChild(li);
+    });
+    var p=filled(); document.getElementById('plPct').textContent=p+'%'; document.getElementById('plBar').style.width=p+'%';
+  }
+  function field(id,label,hint,kind,ph){
+    var v=data[id]||'', h=hint?'<span class="pl-h" id="h_'+id+'">'+hint+'</span>':'';
+    var inp = kind==='area' ? '<textarea id="f_'+id+'" aria-describedby="h_'+id+'" placeholder="'+esc(ph||'')+'">'+esc(v)+'</textarea>'
+            : '<input type="'+(kind||'text')+'" id="f_'+id+'" aria-describedby="h_'+id+'" value="'+esc(v)+'" placeholder="'+esc(ph||'')+'">';
+    return '<label class="pl-l" for="f_'+id+'">'+label+'</label>'+h+inp;
+  }
+  function header(q,intro){
+    var badge = store ? '<span class="pl-saved" id="plSavedBadge">✓ Saved on this device</span>' : '';
+    return '<div class="pl-top"><span class="pl-stepno">Step '+(step+1)+' of '+STEPS.length+'</span>'+badge+'</div><h3 class="pl-q">'+q+'</h3><p class="pl-intro">'+intro+'</p>';
+  }
+  function navBtns(){
+    var back = step>0 ? '<button type="button" class="pl-btn" id="plBack">← Back</button>' : '<span></span>';
+    return '<div class="pl-err" id="plErr" role="alert">Please choose one option to continue.</div><div class="pl-nav">'+back+'<button type="button" class="pl-btn pri" id="plNext">Continue →</button></div>';
+  }
+  function render(){
+    var t=T(), h='';
+    if(step===0){
+      h=header('What would you like to plan?','Choose the closest match. The questions will adapt to your idea. You can change this later.');
+      h+='<div class="pl-types" role="radiogroup" aria-label="Type of idea">';
+      Object.keys(TYPES).forEach(function(k){ var x=TYPES[k]; h+='<button type="button" role="radio" aria-checked="'+(data.type===k)+'" class="pl-type'+(data.type===k?' on':'')+'" data-k="'+k+'"><span class="pl-ic" aria-hidden="true">'+x.ic+'</span><b>'+x.t+'</b><span>'+x.d+'</span></button>'; });
+      h+='</div><div class="pl-checks" style="margin-top:1.25rem"><label><input type="checkbox" id="f_sg"'+(data.sg?' checked':'')+'> I live or plan to start in Singapore</label></div>';
+      h+='<div class="pl-tip"><b>Good to know:</b> there are no wrong answers here. Most successful small businesses start as a rough idea that gets clearer one step at a time.</div>';
+    } else if(step===1){
+      h=header('What are you thinking of making or offering?','Start with the idea as it is today. You can refine it as you go.');
+      h+=field('name','Give your idea a working name','It can change later.','text','e.g. '+t.ex);
+      h+=field('sentence','Describe it in one sentence','What will someone get, use or receive?','area','A practical '+t.noun+' that helps…');
+      h+=field('outcome','What will your customer be able to do afterwards?','Focus on one useful result.','area','They will be able to…');
+      h+='<div class="pl-tip"><b>A helpful filter:</b> if the result is hard to explain in one sentence, narrow the idea before adding more.</div>';
+    } else if(step===2){
+      h=header('Who is it for?','The clearer your customer, the easier everything else becomes.');
+      h+=field('who','Describe your ideal customer','Be specific: age or stage of life, work, situation.','area','e.g. Busy parents in their 30s who run a small home business');
+      h+=field('problem','What problem or wish do they have?','In their words, not yours.','area','They are tired of…  /  They want to…');
+      h+=field('whereThey','Where do these people already spend time?','Online groups, places, events, websites.','area','e.g. Facebook groups for home bakers, weekend markets');
+      h+='<div class="pl-tip"><b>Try this:</b> talk to three people who fit this description this week, and ask about the problem before you mention your idea.</div>';
+    } else if(step===3){
+      h=header('What exactly will you offer?','Keep the first version small and clear. You can add more once people buy.');
+      h+=field('included','What is included?','List the main parts, one per line.','area','e.g.\n• A 20-page workbook\n• A pricing spreadsheet');
+      h+='<div class="pl-row2"><div>'+'<label class="pl-l" for="f_currency">Currency</label><span class="pl-h">Use the currency your customers pay in.</span><select id="f_currency">';
+      ['USD','SGD','MYR','PHP','AUD','GBP','EUR','Other'].forEach(function(c){ h+='<option'+((data.currency||'USD')===c?' selected':'')+'>'+c+'</option>'; });
+      h+='</select></div><div>'+field('price','Your first price','A number you can test and change later.','number','e.g. 9')+'</div></div>';
+      h+=field('priceWhy','Why this price?','Think about your time, your costs and the value to the customer.','area','e.g. It saves them about 5 hours of work');
+      h+='<div class="pl-tip"><b>Pricing tip:</b> many first-time sellers price too low. If nobody asks a question about your price, it may be too cheap.</div>';
+    } else if(step===4){
+      h=header('How will people find and buy it?','Choose a few places to start. You do not need to be everywhere.');
+      h+='<label class="pl-l">Where will you sell or find customers?</label><span class="pl-h">Tick all that apply.</span><div class="pl-checks">';
+      var w=data.where||[]; t.where.forEach(function(x,i){ h+='<label><input type="checkbox" class="pl-w" value="'+esc(x)+'"'+(w.indexOf(x)>-1?' checked':'')+'> '+esc(x)+'</label>'; });
+      h+='</div>';
+      h+=field('first10','How will you reach your first 10 customers?','Name real people, groups or places if you can.','area','e.g. Message 20 past colleagues, post in two groups, offer 3 friends an early price');
+      h+=field('launchDate','Your target launch or first-sale date','A real date gives the plan a finish line.','date');
+      h+='<div class="pl-tip"><b>Start small:</b> a "soft launch" to people you know is a safe way to test before telling everyone.</div>';
+    } else if(step===5){
+      h=header('Your next three steps','Small, specific actions with real dates turn a plan into progress.');
+      [1,2,3].forEach(function(n){ h+='<div class="pl-row3"><div>'+field('step'+n,'Step '+n,n===1?'Something you can do this week.':'','text',n===1?'e.g. Write down 10 people to ask for feedback':'')+'</div><div>'+field('date'+n,'By when','', 'date')+'</div></div>'; });
+      h+=field('hours','How many hours a week can you give this?','Be honest. A plan that fits your life is one you will keep.','text','e.g. 4 hours, Tuesday and Saturday mornings');
+      h+='<div class="pl-row2"><div>'+field('worry','What worries you most?','','area','e.g. Nobody will buy it')+'</div><div>'+field('worryFix','One small thing you can do about it','','area','e.g. Ask 5 people if they would pay before I build it')+'</div></div>';
+    } else {
+      h=summary();
+    }
+    if(step<6) h+=navBtns();
+    card.innerHTML=h; nav(); wire();
+  }
+  function recs(){
+    var r=[];
+    var R={
+      validate:['Book · Digital Product Growth','Validate Your Next Product','Five signals to check demand before you build.','validate-your-next-product','USD 9'],
+      builder:['Best value pack','Solo Digital Product Builder Pack','All 5 Digital Product Growth books, spreadsheets and templates.','solo-digital-product-builder-pack','USD 35'],
+      pagekit:['Book · Digital Product Growth','The Gumroad Product Page Kit','Write a product page that sells.','the-gumroad-product-page-kit','USD 7'],
+      client:['Checklist','Client Onboarding Checklist','Start every client relationship the right way.','client-onboarding-checklist','USD 5'],
+      gig:['Bundle · Gig and Freelance','Gig and Freelance Starter Bundle','Income stability, tax, retirement and benefits for freelancers.','gig-and-freelance-starter-bundle','USD 27'],
+      rate:['Free tool','Know Your Worth: Pricing Calculator','Work out your hourly rate and project prices.','know-your-worth-pricing-calculator-free','FREE'],
+      proposal:['Free templates','Client Proposal and Agreement Kit','A proposal to win the work and an agreement to protect it.','client-proposal-agreement-kit-free','FREE'],
+      starter:['Workbook','Online Business Starter Planner','Plan your first online business step by step.','business-starter','USD 7'],
+      launch:['Workbook','Business Launch Checklist and Timeline','Every launch step, in order.','launch-checklist','USD 7'],
+      ideas:['Free book','Spot Ideas, Find Opportunities','Turn everyday problems into business ideas.','women-founder-growth-series-spot-ideas-find-opportunities-free','FREE'],
+      ideasGen:['Workbook','Digital Product Ideas Generator','200 niche ideas to spark your own.','ideas-generator','USD 7'],
+      sg:['For Singaporeans','Start Your Singapore Business','Registering, CPF, GST, grants and your first-year plan.','start-your-singapore-business','USD 9'],
+      sgfree:['For Singaporeans · Free','Start Your Business Starter','12 steps before you start a business in Singapore.','start-your-business-starter-free','FREE']
+    };
+    var m={digital:['validate','pagekit','builder'],service:['rate','proposal','client','gig'],physical:['starter','launch','rate'],unsure:['ideas','ideasGen','validate']}[data.type||'unsure'];
+    if(data.sg){ m=m.slice(0,2).concat(['sgfree','sg']); }
+    m.forEach(function(k){ r.push(R[k]); });
+    return r.map(function(x){ return '<div class="pl-rec"><small>'+x[0]+'</small><b>'+x[1]+'</b><span>'+x[2]+'</span><a href="'+G+x[3]+'" target="_blank" rel="noopener">'+(x[4]==='FREE'?'Get it free':'View · '+x[4])+' →</a></div>'; }).join('');
+  }
+  function fmtDate(v){ if(!v) return ''; var d=new Date(v+'T00:00:00'); return isNaN(d)?v:d.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}); }
+  function rows(){
+    var t=T(), price = data.price ? (data.currency||'USD')+' '+data.price : '';
+    var steps=[1,2,3].map(function(n){ return data['step'+n] ? n+'. '+data['step'+n]+(data['date'+n]?' (by '+fmtDate(data['date'+n])+')':'') : ''; }).filter(Boolean).join('\n');
+    return [
+      ['The idea',[['Type',t.t],['Working name',data.name],['In one sentence',data.sentence],['Customer result',data.outcome]]],
+      ['Your audience',[['Ideal customer',data.who],['Their problem or wish',data.problem],['Where they spend time',data.whereThey]]],
+      ['The offer',[["What's included",data.included],['First price',price],['Why this price',data.priceWhy]]],
+      ['The launch',[['Where I will sell',(data.where||[]).join(', ')],['First 10 customers',data.first10],['Target date',fmtDate(data.launchDate)]]],
+      ['Action plan',[['Next three steps',steps],['Weekly time',data.hours],['Biggest worry',data.worry],['What I will do about it',data.worryFix]]]
+    ];
+  }
+  function summary(){
+    var p=filled(), msg = p>=90?'Your plan is ready. Time to take step one.':p>=60?'A strong start. Fill in the gaps when you can.':'A good beginning. Go back and add a little more detail.';
+    var h=header('Your plan on a page','Here is everything in one place. Download or print it, and keep it somewhere you will see it.');
+    h+='<div class="pl-score"><big>'+p+'%</big><div><b>'+msg+'</b><br><span style="color:#cbd5e1">Based on the key questions you have answered.</span></div></div><div class="pl-sum">';
+    rows().forEach(function(sec){ h+='<h4>'+sec[0]+'</h4><dl>'; sec[1].forEach(function(r){ h+='<dt>'+r[0]+'</dt><dd>'+(r[1]?esc(r[1]):'<span class="pl-empty">Not answered yet</span>')+'</dd>'; }); h+='</dl>'; });
+    h+='</div><div class="pl-actions"><button type="button" class="pl-btn pri" id="plPrint">⬇ Download or print my plan</button><button type="button" class="pl-btn" id="plCopy">Copy as text</button><button type="button" class="pl-btn" id="plEdit">← Edit my answers</button></div>';
+    h+='<p class="pl-note">To save as a PDF: click "Download or print", then choose "Save as PDF" as the printer.</p>';
+    h+='<h4 style="font-family:\'Fredoka One\',cursive;color:#0a0f1e;font-size:1.3rem;margin:2rem 0 0.3rem;">Helpful next steps from Volare</h4><p class="pl-note" style="margin-top:0">Chosen to match your plan. Free items are marked.</p><div class="pl-recs">'+recs()+'</div>';
+    h+='<div class="pl-actions" style="margin-top:1.75rem"><button type="button" class="pl-btn" id="plNew">Start a new plan</button></div>';
+    return h;
+  }
+  function collect(){
+    FIELDS.forEach(function(f){ var el=document.getElementById('f_'+f); if(!el) return; data[f]= el.type==='checkbox' ? el.checked : el.value.trim(); });
+    var ws=card.querySelectorAll('.pl-w'); if(ws.length){ data.where=[]; ws.forEach(function(c){ if(c.checked) data.where.push(c.value); }); }
+    save(); var p=filled(); document.getElementById('plPct').textContent=p+'%'; document.getElementById('plBar').style.width=p+'%';
+  }
+  function go(i,needType){
+    step=Math.max(0,Math.min(STEPS.length-1,i)); save(); render();
+    if(needType){ var e=document.getElementById('plErr'); if(e) e.style.display='block'; }
+    var top=document.getElementById('planner').getBoundingClientRect().top+window.pageYOffset-90;
+    if(Math.abs(window.pageYOffset-top)>300) window.scrollTo({top:top,behavior:'smooth'});
+  }
+  function plainText(){
+    var out='MY PLAN · Volare Consultants planner\n\n';
+    rows().forEach(function(sec){ out+=sec[0].toUpperCase()+'\n'; sec[1].forEach(function(r){ out+=r[0]+': '+(r[1]||'-')+'\n'; }); out+='\n'; });
+    return out+'General guidance only, not legal, tax or financial advice. volareconsultants.online';
+  }
+  function printPlan(){
+    var body='';
+    rows().forEach(function(sec){ body+='<h2>'+sec[0]+'</h2><table>'; sec[1].forEach(function(r){ body+='<tr><th>'+r[0]+'</th><td>'+(r[1]?esc(r[1]).replace(/\n/g,'<br>'):'<span class="e">Not answered yet</span>')+'</td></tr>'; }); body+='</table>'; });
+    var html='<!doctype html><html><head><meta charset="utf-8"><title>My plan · '+esc(data.name||'Volare planner')+'</title><style>body{font-family:Arial,sans-serif;color:#0a0f1e;max-width:760px;margin:30px auto;padding:0 20px;font-size:12pt;line-height:1.5}h1{font-size:22pt;margin:0}h1 span{color:#d97706}.sub{color:#475569;margin:4px 0 18px}h2{font-size:14pt;color:#92400e;border-bottom:2px solid #f59e0b;padding-bottom:4px;margin:22px 0 8px}table{width:100%;border-collapse:collapse}th{text-align:left;width:32%;vertical-align:top;padding:6px 10px 6px 0}td{padding:6px 0;vertical-align:top}.e{color:#94a3b8;font-style:italic}.f{margin-top:28px;font-size:9.5pt;color:#64748b;border-top:1px solid #e2e8f0;padding-top:8px}@media print{body{margin:0 auto}}</style></head><body><h1>My plan: <span>'+esc(data.name||'My idea')+'</span></h1><div class="sub">Plan progress '+filled()+'% · Made with the free Volare Consultants planner</div>'+body+'<div class="f">General guidance only, not legal, tax or financial advice. More free tools at volareconsultants.online</div><script>window.onload=function(){window.print();}<\/script></body></html>';
+    var w=null; try{ w=window.open('','_blank'); }catch(e){}
+    if(w){ w.document.open(); w.document.write(html); w.document.close(); }
+    else { alertMsg('Your browser blocked the print window. Please use "Copy as text" instead, or allow pop-ups for this site.'); }
+  }
+  function alertMsg(t){ var p=document.createElement('p'); p.className='pl-note'; p.setAttribute('role','status'); p.style.fontWeight='800'; p.style.color='#0f766e'; p.textContent=t; var a=card.querySelector('.pl-actions'); if(a){ a.parentNode.insertBefore(p,a.nextSibling); setTimeout(function(){ if(p.parentNode) p.parentNode.removeChild(p); },6000); } }
+  function wire(){
+    card.querySelectorAll('.pl-type').forEach(function(b){ b.onclick=function(){ data.type=b.getAttribute('data-k'); collect(); save(); render(); }; });
+    card.querySelectorAll('input,textarea,select').forEach(function(el){ el.addEventListener('change',collect); el.addEventListener('blur',collect); });
+    var n=document.getElementById('plNext'), b=document.getElementById('plBack');
+    if(n) n.onclick=function(){ collect(); if(step===0&&!data.type){ document.getElementById('plErr').style.display='block'; return; } go(step+1); };
+    if(b) b.onclick=function(){ collect(); go(step-1); };
+    var pr=document.getElementById('plPrint'); if(pr) pr.onclick=printPlan;
+    var cp=document.getElementById('plCopy'); if(cp) cp.onclick=function(){
+      var txt=plainText();
+      function fallback(){ var ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy'); alertMsg('Copied. You can paste your plan into an email or notes app.'); }catch(e){ alertMsg('Please select and copy the plan above.'); } document.body.removeChild(ta); }
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(function(){ alertMsg('Copied. You can paste your plan into an email or notes app.'); },fallback); } else fallback();
+    };
+    var ed=document.getElementById('plEdit'); if(ed) ed.onclick=function(){ go(1); };
+    var nw=document.getElementById('plNew'); if(nw) nw.onclick=function(){ if(window.confirm('Start a new plan? This clears your current answers on this device. Download or copy your plan first if you want to keep it.')){ data={}; step=0; save(); render(); } };
+  }
+  load(); render();
+})();
+</script>
 </div>
 
 <!-- ═══════════════════════════════════════════════
@@ -2411,7 +2715,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-nav">
-    <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Library</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#nextchapter" style="color:var(--sage-dark);font-weight:800;">Next Chapter Library</a> <a href="#singaporeans" style="color:var(--navy);font-weight:800;">For Singaporeans</a> <a href="#financial">Financial Intelligence</a>
+    <a href="#planner" style="color:var(--gold-dark);font-weight:800;">Plan Your Idea</a> <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Library</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#nextchapter" style="color:var(--sage-dark);font-weight:800;">Next Chapter Library</a> <a href="#singaporeans" style="color:var(--navy);font-weight:800;">For Singaporeans</a> <a href="#financial">Financial Intelligence</a>
     <a href="#women" style="color:#6E2F45;font-weight:800;">For Women · Her Way</a>
     <a href="#girlbossfree" style="color:var(--rose-dark);font-weight:800;">Girl Boss Essentials</a>
     <a href="#foundergrowth" style="color:var(--rose-dark);font-weight:800;">Founder Growth Series</a>
