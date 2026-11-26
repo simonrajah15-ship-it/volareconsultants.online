@@ -566,7 +566,7 @@
 <nav>
   <a class="nav-brand" href="#">Volare <span>Consultants</span></a>
   <div class="nav-links">
-    <a href="#search" style="color:var(--navy);font-weight:800;">🔍 Search</a> <a href="#planner" style="color:var(--gold-dark);font-weight:800;">🧭 Plan Your Idea</a> <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Library</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#learn" style="color:var(--teal);font-weight:800;">Insight Center</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#nextchapter" style="color:var(--sage-dark);font-weight:800;">Next Chapter Library</a> <a href="#singaporeans" style="color:var(--navy);font-weight:800;">For Singaporeans</a> <a href="#financial">Financial Intelligence</a>
+    <a href="#finder" style="color:var(--gold-dark);font-weight:800;">⭐ Start Here</a> <a href="#search" style="color:var(--navy);font-weight:800;">🔍 Search</a> <a href="#planner" style="color:var(--gold-dark);font-weight:800;">🧭 Plan Your Idea</a> <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Library</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#learn" style="color:var(--teal);font-weight:800;">Insight Center</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#nextchapter" style="color:var(--sage-dark);font-weight:800;">Next Chapter Library</a> <a href="#singaporeans" style="color:var(--navy);font-weight:800;">For Singaporeans</a> <a href="#financial">Financial Intelligence</a>
     <a href="#women" style="color:#6E2F45;font-weight:800;">For Women</a>
     <a href="#business">Business &amp; Marketing</a>
     <a href="#gigfreelance">Gig &amp; Freelance</a>
@@ -590,6 +590,7 @@
 
   <div class="hero-btns">
     <a class="btn-primary" href="https://volareconsultants.gumroad.com" target="_blank">Browse All Products →</a>
+    <a class="btn-secondary" href="#finder">⭐ Start Here: Find Your Guide</a>
     <a class="btn-secondary" href="#free">Browse Free Library</a>
     <a class="btn-secondary" href="#planner">🧭 Plan Your Idea · Free</a>
   </div>
@@ -601,6 +602,161 @@
     <div class="stat"><div class="stat-num">USD</div><div class="stat-label">Fixed Pricing</div></div>
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════
+     START HERE · PRODUCT FINDER (3 questions → matched products)
+     Runs only in the visitor's browser. Nothing is saved or sent.
+     To change a recommendation: edit the GOALS list in the script below.
+════════════════════════════════════════════════ -->
+<div id="finder" style="background:#ffffff;padding:3.25rem 2rem;border-top:4px solid #f59e0b;border-bottom:1px solid #e2e8f0;">
+<style>
+  #finder .fd-wrap { max-width:980px; margin:0 auto; }
+  #finder .fd-eyebrow { display:inline-block; background:#fef3c7; color:#92400e; font-size:0.8rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:0.35rem 1rem; border-radius:20px; margin-bottom:0.8rem; }
+  #finder h2.fd-title { font-family:'Fredoka One',cursive; font-size:clamp(1.7rem,4vw,2.4rem); color:#0a0f1e; line-height:1.2; margin-bottom:0.5rem; }
+  #finder h2.fd-title em { color:#d97706; font-style:normal; }
+  #finder .fd-sub { color:#334155; font-size:1.05rem; max-width:640px; margin-bottom:1.5rem; }
+  #finder .fd-card { background:#f8fafc; border:1px solid #e2e8f0; border-radius:16px; padding:1.75rem 2rem; }
+  #finder .fd-top { display:flex; justify-content:space-between; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.4rem; }
+  #finder .fd-stepno { font-size:0.85rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:#64748b; }
+  #finder .fd-dots { display:flex; gap:0.4rem; }
+  #finder .fd-dots span { width:34px; height:8px; border-radius:6px; background:#e2e8f0; }
+  #finder .fd-dots span.on { background:#f59e0b; }
+  #finder h3.fd-q { font-family:'Fredoka One',cursive; font-size:1.55rem; color:#0a0f1e; margin-bottom:1rem; line-height:1.25; }
+  #finder .fd-opts { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:0.75rem; }
+  #finder .fd-opt { text-align:left; font-family:'Nunito',sans-serif; background:#fff; border:2px solid #cbd5e1; border-radius:14px; padding:0.95rem 1.1rem; cursor:pointer; display:flex; gap:0.8rem; align-items:flex-start; }
+  #finder .fd-opt:hover { border-color:#f59e0b; background:#fffbeb; }
+  #finder .fd-opt:focus-visible, #finder .fd-btn:focus-visible, #finder a:focus-visible { outline:3px solid #f59e0b; outline-offset:2px; }
+  #finder .fd-opt .fd-ic { font-size:1.5rem; line-height:1; flex:none; margin-top:0.1rem; }
+  #finder .fd-opt b { display:block; color:#0a0f1e; font-size:1.05rem; line-height:1.3; }
+  #finder .fd-opt small { display:block; color:#475569; font-size:0.93rem; margin-top:0.15rem; }
+  #finder .fd-nav { display:flex; justify-content:space-between; gap:0.75rem; flex-wrap:wrap; margin-top:1.25rem; }
+  #finder .fd-btn { font-family:'Nunito',sans-serif; font-weight:800; font-size:0.98rem; border-radius:30px; padding:0.7rem 1.4rem; cursor:pointer; border:2px solid #0a0f1e; background:#fff; color:#0a0f1e; }
+  #finder .fd-btn.pri { background:#f59e0b; border-color:#f59e0b; }
+  #finder .fd-res-intro { color:#334155; font-size:1.02rem; margin-bottom:1.1rem; }
+  #finder .fd-res { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
+  #finder .fd-pick { background:#fff; border:2px solid #e2e8f0; border-radius:14px; padding:1.2rem 1.25rem; display:flex; flex-direction:column; gap:0.4rem; }
+  #finder .fd-pick.top { border-color:#f59e0b; box-shadow:0 0 0 3px #fef3c7; }
+  #finder .fd-pick .fd-tag { font-size:0.74rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#d97706; }
+  #finder .fd-pick .fd-best { display:inline-block; align-self:flex-start; background:#0a0f1e; color:#f59e0b; font-size:0.72rem; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; padding:0.2rem 0.6rem; border-radius:12px; }
+  #finder .fd-pick b { color:#0a0f1e; font-size:1.05rem; line-height:1.3; }
+  #finder .fd-pick p { color:#475569; font-size:0.93rem; margin:0; }
+  #finder .fd-pick .fd-foot { display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:0.6rem; gap:0.5rem; }
+  #finder .fd-pick .fd-price { font-family:'Fredoka One',cursive; color:#0a0f1e; font-size:1.1rem; }
+  #finder .fd-pick a.fd-go { background:#0a0f1e; color:#fff; text-decoration:none; font-weight:800; font-size:0.88rem; padding:0.45rem 1rem; border-radius:20px; white-space:nowrap; }
+  #finder .fd-pick.top a.fd-go { background:#f59e0b; color:#0a0f1e; }
+  #finder .fd-more { margin-top:1.25rem; background:#fff; border:1px dashed #cbd5e1; border-radius:12px; padding:0.9rem 1.1rem; font-size:0.95rem; color:#334155; }
+  #finder .fd-more a { color:#b45309; font-weight:800; text-decoration:none; }
+  #finder .fd-note { font-size:0.88rem; color:#64748b; margin-top:1rem; }
+  @media (max-width:600px) {
+    #finder { padding:2rem 1rem; }
+    #finder .fd-card { padding:1.25rem 1rem; }
+    #finder .fd-btn { flex:1; text-align:center; }
+  }
+</style>
+<div class="fd-wrap">
+  <div class="fd-eyebrow">Start Here · 3 Quick Questions</div>
+  <h2 class="fd-title">Not sure where to begin? <em>We'll point the way.</em></h2>
+  <p class="fd-sub">Answer three quick questions and we'll suggest a free place to start, the right guide for you, and the best-value bundle. Takes under a minute. Nothing is saved or sent.</p>
+  <div class="fd-card" id="fdCard" aria-live="polite"></div>
+</div>
+<script>
+(function(){
+  var G='https://volareconsultants.gumroad.com/l/';
+  /* Each item: [title, short reason, slug or full link, price] */
+  var GOALS={
+    money:{ic:'💰',t:'Getting my money under control',d:'Budget, bills, debt and savings.',sec:'#nextchapter',secName:'the Next Chapter Library',
+      free:[['Weekly Budget Tracker','See where your money goes, day by day.','weekly-budget-tracker-free','FREE'],['Your Financial Health Self-Assessment','10 questions to see where you stand.','your-financial-health-self-assessment','FREE']],
+      beginner:[['The 30-Day Money Reset Workbook','15 minutes a day for a month to reset your money habits.','the-30-day-money-reset-workbook','USD 12'],['My Monthly Money Command Centre','One calm money session each month, with a spreadsheet that works it all out.','my-monthly-money-command-centre','USD 12']],
+      some:[['My Monthly Money Command Centre','Bills, debts, savings and goals in one monthly system.','my-monthly-money-command-centre','USD 12'],['The Debt Navigator','List every balance and choose a payoff plan.','financial-intelligence-series-3-the-debt-navigator','USD 7']],
+      deep:[['The Real-Life Budget Builder','A budget that fits your real life.','financial-intelligence-series-2-the-real-life-budget-builder','USD 7'],['The Emergency Fund Builder','Build your safety net step by step.','financial-intelligence-series-4-the-emergency-fund-builder','USD 7']],
+      bundle:[['Money Confidence Reset Pack','5 books and 5 spreadsheet tools. USD 46 if bought separately.','money-confidence-reset-pack','USD 29'],['Financial Intelligence Tier 1 Bundle','6 foundation guides: income, budget, debt and first investments.','financial-intelligence-series-tier-1-bundle','USD 36']]},
+    grow:{ic:'📈',t:'Growing my money for the future',d:'Investing, retirement, property and wealth.',sec:'#financial',secName:'the Financial Intelligence Series',
+      free:[['The Income Reality Check: Free Preview','A 3-page taste of Guide 1.','income-reality-check-preview','FREE'],['Monthly Financial Goals Planner','Set goals and check in weekly.','monthly-financial-goals-planner-free','FREE']],
+      beginner:[['The First Investment Guide','Your very first investment decision, step by step.','financial-intelligence-series-5-the-first-investment-guide','USD 7']],
+      some:[['The Wealth Multiplier','How to grow what you already have.','financial-intelligence-series-7-the-wealth-multiplier','USD 7'],['The Retirement Architect','Plan the retirement you want.','financial-intelligence-series-11-the-retirement-architect','USD 7']],
+      deep:[['The Wealth-Building Roadmap for Your 30s–50s','Our deepest guide: decade by decade, with a 90-day roadmap.','the-wealth-building-roadmap-for-your-30s-50s','USD 37']],
+      bundle:[['Financial Intelligence Tier 2 Bundle','6 growth guides: wealth, tax, property, protection, retirement.','financial-intelligence-series-tier-2-bundle','USD 36'],['Financial Intelligence Ultimate Bundle','All 18 guides, foundations to mastery.','financial-intelligence-series-ultimate-bundle','USD 97']]},
+    earn:{ic:'🧑‍💻',t:'Freelancing or a side income',d:'Steady income, pricing, tax and clients.',sec:'#gigfreelance',secName:'Gig and Freelance',
+      free:[['Know Your Worth: Pricing Calculator','Work out your hourly rate and project prices.','know-your-worth-pricing-calculator-free','FREE'],['Freelancer Cash Flow Tracker','Track income, expenses and tax set-aside.','freelancer-cash-flow-tracker-free','FREE']],
+      beginner:[["The Freelancer's Income Stability Playbook",'Steadier money when your income changes.','the-freelancers-income-stability-playbook','USD 7']],
+      some:[['Freelance Tax Planning, Demystified','A year-round tax rhythm instead of panic.','freelance-tax-planning-demystified','USD 7'],['The Feast-or-Famine Survival Fund Calculator','Work out the safety net your income needs.','the-feast-or-famine-survival-fund-calculator','USD 7']],
+      deep:[['The AI-Era Income Blueprint','Build income security as AI changes work.','the-ai-era-income-blueprint','USD 37']],
+      bundle:[['Gig and Freelance Starter Bundle','All 5 freelance guides, PDF and EPUB.','gig-and-freelance-starter-bundle','USD 27']]},
+    business:{ic:'🚀',t:'Starting or growing a business',d:'Plans, launches, digital products and AI.',sec:'#business',secName:'Business and Marketing',
+      free:[['Plan Your Idea (free tool on this page)','Take your idea from maybe to a plan in about 20 minutes.','#planner','FREE'],['Client Proposal and Agreement Kit','Win the work and protect it.','client-proposal-agreement-kit-free','FREE']],
+      beginner:[['Online Business Starter Planner','Plan your first online business step by step.','business-starter','USD 7'],['Validate Your Next Product','Check demand before you build.','validate-your-next-product','USD 9']],
+      some:[['The Digital Product Production System','Eight repeatable stages from idea to live product.','the-digital-product-production-system','USD 9'],["The Solo Founder's AI Playbook",'20 ready-to-use prompts to save time and grow.','the-solo-founder-ai-playbook','USD 7']],
+      deep:[["The Business Owner's AI Advantage",'Our deepest guide for solo founders using AI.','the-business-owners-ai-advantage','USD 37']],
+      bundle:[['Solo Digital Product Builder Pack','5 books, 5 spreadsheets and Word templates.','solo-digital-product-builder-pack','USD 35'],['Business Builder Kit','4 starting and launching workbooks.','business-builder-kit','USD 19']]},
+    career:{ic:'💼',t:'My career and work with AI',d:'Changing jobs, returning to work, using AI.',sec:'#nextchapter',secName:'the Next Chapter Library',
+      free:[['AI-at-Work Readiness Self-Check','20 quick statements to see where you stand.','ai-at-work-readiness-self-check-free','FREE']],
+      beginner:[['AI for Everyday Life and Money','Safe prompts for busy adults.','ai-for-everyday-life-and-money','USD 9']],
+      some:[['The Career Pivot Workbook','Take stock and take your next step as AI changes work.','the-career-pivot-workbook','USD 12'],['Your Return-to-Work Roadmap','Plan a return that fits your life.','your-return-to-work-roadmap','USD 9']],
+      deep:[['The AI-Era Income Blueprint','Four income paths, a risk map and a 90-day plan.','the-ai-era-income-blueprint','USD 37']],
+      bundle:[['Next Chapter Career and Life Pack','All 4 Career and Life books plus tools.','career-and-life-pack','USD 25']]},
+    women:{ic:'🌸',t:'Money, AI and life as a woman',d:'Her Way library and women founder series.',sec:'#women',secName:'Volare for Women',
+      free:[['AI for Women Who Feel Behind','15 calm minutes a day for 7 days.','ai-for-women-who-feel-behind-free','FREE'],['My Money Safety Checklist','A gentle 10-question money check.','my-money-safety-checklist-free','FREE']],
+      beginner:[['AI for Busy Women','Win back hours at home with AI.','ai-for-busy-women','USD 7'],['Closing the Confidence Gap: Investing for Women','A 4-step on-ramp to investing.','closing-the-confidence-gap-investing-for-women','USD 7']],
+      some:[['Protect and Grow Your Job in the AI Era','Audit your tasks and show your value.','protect-and-grow-your-job-in-the-ai-era','USD 9'],['Confident Client Starter Kit','A simple system for welcoming service clients.','women-founder-client-systems-confident-client-starter-kit','USD 8']],
+      deep:[["My Financial Independence Plan, Women's Edition",'Every worksheet pulled into one 90-day plan.','my-financial-independence-plan-womens-edition','USD 7']],
+      bundle:[['Her AI Advantage Pack','All 4 Her AI Advantage books and tools.','her-ai-advantage-pack','USD 25'],["Women's Wealth and Business Bundle",'All 9 guides on investing, pay, business and more.','womens-wealth-business-bundle','USD 47']]},
+    sg:{ic:'🇸🇬',t:'Life as a Singaporean',d:'CPF, housing, SkillsFuture, living overseas.',sec:'#singaporeans',secName:'The Singaporean Advantage',
+      free:[['The Singaporean Opportunity Checklist','13 things to do this year, at home or abroad.','the-singaporean-opportunity-checklist-free','FREE'],['Your CPF and Money Starter','12 money moves for your 20s and 30s.','cpf-and-money-starter-free','FREE']],
+      beginner:[['The Singaporean Advantage Guide','Every portal, scheme and network, explained.','the-singaporean-advantage-guide','USD 19']],
+      some:[['Your CPF and Money Plan for Your 20s and 30s','How CPF grows, top-ups, budget and investing basics.','your-cpf-and-money-plan','USD 9'],['Your First Home Planner','BTO and resale, grants, loans and the full cost.','your-first-home-planner','USD 12']],
+      deep:[['Start Your Singapore Business','Registering, CPF, GST, grants and your first year.','start-your-singapore-business','USD 9']],
+      bundle:[['The Singaporean Advantage: Complete Pack','All 7 guides and 6 planners. Worth USD 77.','the-singaporean-advantage-complete-pack','USD 45']]},
+    kids:{ic:'👨‍👩‍👧',t:'Raising money-smart, AI-smart children',d:'Talking to children about money and AI.',sec:'#newreleases',secName:'New Releases',
+      free:[['Family AI Plan (free tool on our sister site)','Make your family AI rules together, ages 8–17.','https://www.aicreatorlab.store/#familyplan','FREE']],
+      beginner:[['The Family Money Playbook','Conversation scripts and activities for ages 8–17.','the-family-money-playbook','USD 7']],
+      some:[['The Family Money Playbook','Raise money-smart kids at every stage.','the-family-money-playbook','USD 7']],
+      deep:[["The Parent's Guide to Raising a Financially Independent Child",'Our deepest guide for ages 11–17.','the-parents-guide-to-raising-a-financially-independent-child','USD 37']],
+      bundle:[['AI Creator Lab (our sister site)','AI literacy books, games and bundles for ages 8–17.','https://www.aicreatorlab.store','Visit']]}
+  };
+  var STAGES={beginner:{ic:'🌱',t:"I'm just starting",d:'Keep it simple and practical.'},some:{ic:'🌿',t:'I know the basics',d:'Ready for the next step.'},deep:{ic:'🌳',t:'I want the full picture',d:'Show me the deepest guides.'}};
+  var PREFS={free:{ic:'🎁',t:'Something free to start',d:'Try before you buy.'},single:{ic:'📘',t:'One focused guide',d:'The single best fit.'},bundle:{ic:'⭐',t:'The best-value bundle',d:'Everything on the topic, for less.'}};
+  var a={}, step=0, card=document.getElementById('fdCard');
+  function esc(s){ return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+  function link(x){ return x.charAt(0)==='#'||x.indexOf('http')===0 ? x : G+x; }
+  function opts(list,key){ return '<div class="fd-opts">'+Object.keys(list).map(function(k){ var o=list[k]; return '<button type="button" class="fd-opt" data-key="'+key+'" data-v="'+k+'"><span class="fd-ic" aria-hidden="true">'+o.ic+'</span><span><b>'+esc(o.t)+'</b><small>'+esc(o.d)+'</small></span></button>'; }).join('')+'</div>'; }
+  function head(q){ return '<div class="fd-top"><span class="fd-stepno">Question '+(step+1)+' of 3</span><div class="fd-dots" aria-hidden="true">'+[0,1,2].map(function(i){return '<span'+(i<=step?' class="on"':'')+'></span>';}).join('')+'</div></div><h3 class="fd-q">'+q+'</h3>'; }
+  function pick(item,tag,top){
+    var ext=item[2].indexOf('http')===0, inPage=item[2].charAt(0)==='#';
+    return '<div class="fd-pick'+(top?' top':'')+'">'+(top?'<span class="fd-best">Our top pick for you</span>':'')+'<span class="fd-tag">'+tag+'</span><b>'+esc(item[0])+'</b><p>'+esc(item[1])+'</p><div class="fd-foot"><span class="fd-price">'+esc(item[3])+'</span><a class="fd-go" href="'+link(item[2])+'"'+(inPage?'':' target="_blank" rel="noopener"')+'>'+(inPage?'Open it':(item[3]==='FREE'?'Get it free':(item[3]==='Visit'?'Visit':'View')))+' →</a></div></div>';
+  }
+  function results(){
+    var g=GOALS[a.goal], guides=g[a.stage]||g.beginner, f=g.free[0], gd=guides[0], b=g.bundle[0];
+    var cards=[['free',f,'Free start'],['single',gd,'Your best-fit guide'],['bundle',b,'Best value']];
+    cards.sort(function(x,y){ return (y[0]===a.pref)-(x[0]===a.pref); });
+    var h='<div class="fd-top"><span class="fd-stepno">Your starting point</span></div><h3 class="fd-q">Here\'s where we\'d start: '+esc(g.t.toLowerCase())+'</h3>';
+    var PH={beginner:'someone just starting',some:'someone who knows the basics',deep:'someone who wants the full picture'};
+    h+='<p class="fd-res-intro">Chosen for '+PH[a.stage]+'. Your top pick is first.</p><div class="fd-res">'+cards.map(function(c,i){ return pick(c[1],c[2],i===0); }).join('')+'</div>';
+    var extra=[].concat(g.free.slice(1),guides.slice(1),g.bundle.slice(1)).filter(function(x){ return x[2]!==gd[2]; });
+    if(extra.length) h+='<div class="fd-more"><b>Also worth a look:</b> '+extra.map(function(x){ var inPage=x[2].charAt(0)==='#'; return '<a href="'+link(x[2])+'"'+(inPage?'':' target="_blank" rel="noopener"')+'>'+esc(x[0])+'</a> ('+esc(x[3])+')'; }).join(' · ')+'</div>';
+    h+='<div class="fd-more">Want to browse everything on this topic? <a href="'+g.sec+'">See '+esc(g.secName)+' →</a></div>';
+    h+='<div class="fd-nav"><button type="button" class="fd-btn" id="fdBack">← Change my answers</button><button type="button" class="fd-btn pri" id="fdAgain">Start again</button></div>';
+    h+='<p class="fd-note">Suggestions are general, based only on your three answers. General information, not financial advice.</p>';
+    return h;
+  }
+  function render(){
+    var h;
+    if(step===0) h=head('What would you like help with?')+opts(GOALS,'goal');
+    else if(step===1) h=head('Where are you starting from?')+opts(STAGES,'stage');
+    else if(step===2) h=head('What would you like to see first?')+opts(PREFS,'pref');
+    else h=results();
+    if(step>0&&step<3) h+='<div class="fd-nav"><button type="button" class="fd-btn" id="fdBack">← Back</button><span></span></div>';
+    card.innerHTML=h; wire();
+  }
+  function wire(){
+    card.querySelectorAll('.fd-opt').forEach(function(b){ b.onclick=function(){ a[b.getAttribute('data-key')]=b.getAttribute('data-v'); step++; render(); var f=card.querySelector('.fd-opt,.fd-pick a'); if(f&&step<3) f.focus({preventScroll:true}); }; });
+    var bk=document.getElementById('fdBack'); if(bk) bk.onclick=function(){ step=Math.max(0,step-1); render(); };
+    var ag=document.getElementById('fdAgain'); if(ag) ag.onclick=function(){ a={}; step=0; render(); };
+  }
+  render();
+})();
+</script>
+</div>
+
 
 <!-- SEARCH: finds any product on this page -->
 <div class="find-wrap" id="search">
@@ -2721,7 +2877,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-nav">
-    <a href="#planner" style="color:var(--gold-dark);font-weight:800;">Plan Your Idea</a> <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Library</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#nextchapter" style="color:var(--sage-dark);font-weight:800;">Next Chapter Library</a> <a href="#singaporeans" style="color:var(--navy);font-weight:800;">For Singaporeans</a> <a href="#financial">Financial Intelligence</a>
+    <a href="#finder" style="color:var(--gold-dark);font-weight:800;">Start Here</a> <a href="#planner" style="color:var(--gold-dark);font-weight:800;">Plan Your Idea</a> <a href="#free" style="color:var(--gold-dark);font-weight:800;">Free Library</a> <a href="#templates" style="color:var(--rose-dark);font-weight:800;">Free Templates</a> <a href="#flagship" style="color:var(--gold-dark);font-weight:800;">Flagship Guides</a> <a href="#nextchapter" style="color:var(--sage-dark);font-weight:800;">Next Chapter Library</a> <a href="#singaporeans" style="color:var(--navy);font-weight:800;">For Singaporeans</a> <a href="#financial">Financial Intelligence</a>
     <a href="#women" style="color:#6E2F45;font-weight:800;">For Women · Her Way</a>
     <a href="#girlbossfree" style="color:var(--rose-dark);font-weight:800;">Girl Boss Essentials</a>
     <a href="#foundergrowth" style="color:var(--rose-dark);font-weight:800;">Founder Growth Series</a>
